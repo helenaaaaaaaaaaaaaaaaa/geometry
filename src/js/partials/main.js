@@ -15,25 +15,15 @@ $(document).ready(function () {
 	$('.js-partners-slider').slick({
 		infinite: true,
 		arrows: true,
-		slidesToScroll: 6,
+		slidesToScroll: 1,
 		speed: 300,
 		variableWidth: true,
 		prevArrow: '<button type="button" class="partners-arrow partners-arrow--prev"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11L6 6L1 1" stroke="white"/></svg></button>',
 		nextArrow: '<button type="button" class="partners-arrow partners-arrow--next"><svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 11L6 6L1 1" stroke="white"/></svg></button>',
-		responsive: [{
-				breakpoint: 1280, //аналог max-width
-				settings: {
-					slidesToScroll: 6,
-				}
-			},
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToScroll: 2,
-					arrows: true,
-				}
-			}
-		]
+		autoplay: true,
+		autoplaySpeed: 1500,
+		speed: 2000,
+		
 	});
 
 	$(".js-range-slider-1").ionRangeSlider({
@@ -123,6 +113,29 @@ $(document).ready(function () {
 		autoplaySpeed: 1500,
 		speed: 2000,
 		fade: true,
+	});
+	$('.js-answer-form--validation').on("submit", function(e){
+		e.preventDefault();
+		var form = $(this);
+		var valid = true;
+		if(form.find('[name="description"]').val().length<3){
+			valid=false;
+		}
+		if(form.find('[name="yourname"]').val().length<3){
+			valid=false;
+		}
+		if(form.find('[name="yourphone"]').val().length<3){
+			valid=false;
+		}
+		if(!valid){
+			form.find('.answer-form__required').addClass('answer-form__required--onerror');
+		}
+		else{
+			form.find('.answer-form__required').removeClass('answer-form__required--onerror');
+			//form.submit();
+			alert('В этот момент должен срабатывать код отправки формы, который напишет бэкендер');
+		}
+
 	});
 
 });

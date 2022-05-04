@@ -418,8 +418,11 @@
 		text-align: center;
 		font-size: 14px;
 		line-height: 145%;
-		
+		display: none;
 		color: red;
+		&--onerror{
+			display: block;
+		}
 	}
 	&-input{
 		display: block;
