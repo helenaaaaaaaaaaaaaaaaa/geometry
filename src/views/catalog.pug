@@ -1,0 +1,33 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	.container
+		input.js-range-slider-1(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target")
+
+		.ion-rs-double
+			input.js-range-slider-double(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-to="5000000" data-target-from="irs-double-1-from" data-target-to="irs-double-1-to")
+			.ion-rs-double-inputs
+				input#irs-double-1-from.ion-rs-double-input.ion-rs-double-input--from(type="text")
+				input#irs-double-1-to.ion-rs-double-input.ion-rs-double-input--to(type="text")
+
+
+
+		.ion-rs-double
+			input.js-range-slider-double(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-to="5000000" data-target-from="irs-double-2-from" data-target-to="irs-double-2-to")
+			.ion-rs-double-inputs
+				input#irs-double-2-from.ion-rs-double-input.ion-rs-double-input--from(type="text")
+				input#irs-double-2-to.ion-rs-double-input.ion-rs-double-input--to(type="text")
+
+
+
+
+

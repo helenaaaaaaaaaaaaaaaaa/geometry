@@ -1,0 +1,102 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	section.promo
+		.container
+			
+			.promo__inner
+
+				.promo-left
+					h1.promo-left__title Инвестиции в&nbsp;коммерческую недвижимость
+					p.promo-left__subtitle Работаем без комиссии. Найдем и&nbsp;проанализируем локацию для вашего&nbsp;бизнеса!
+					a.promo-left__button.button.button--dark Услуги
+				.promo-right
+					h3.promo-right__title Коллективные <br> инвестиции
+					p.promo-right__subtitle Рассчитайте ваш доход
+					.calc
+						.calc-invest
+							.calc-invest__name Сумма вложений
+							.calc-invest__val#range-slider-1-target 1 000 000 ₽
+							
+							.calc-invest__range-slider
+								input.js-range-slider-1(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target")
+						.calc-month
+							.calc-month__val 99 000 ₽
+							.calc-month__name Доход в месяц
+						.calc-year
+							.calc-year__val 10%
+							.calc-year__name Доход в год
+					a.promo-right__button.button Заполнить анкету
+
+
+		.promo__back
+			img.promo__back-img(src="images/main/promo-bac.jpg", alt="")
+
+	include sections/clients-types.pug
+
+	section.our-approach
+		.container
+			h2.section-title.our-approach__title Наш подход к работе
+			.features
+				.features__item
+					.features__item-title
+						img.features__item-icon(src="images/main/features/convenience-icon.svg", alt="")
+						span Удобство
+					.features__item-desc У нас индивидуальный <br> подход к каждому клиенту.
+				.features__item
+					.features__item-title
+						img.features__item-icon(src="images/main/features/review-icon.svg", alt="")
+						span Анализ
+					.features__item-desc Проведем аналитическую работу по ликвидности объекта, предложим оптимальный объект и схему сделки.
+				.features__item
+					.features__item-title
+						img.features__item-icon(src="images/main/features/partner-icon.svg", alt="")
+						span Партнерство
+					.features__item-desc Работаем без комиссии. Предоставим оптимальные  локации для развития бизнеса.
+	section.answer-box(id="ex1")
+		.answer-box__back
+			img.answer-box__back-img(src="images/main/answer-bac.jpg", alt="")
+		.container
+			form.answer-form
+				h2.section-title.answer-form__title ПОЛУЧИТЕ ОТВЕТ ЭКСПЕРТА УЖЕ СЕГОДНЯ
+				.answer-form-wrap
+					.form-field.answer-form__field.answer-form__field--task
+						input.form-field__input(placeholder="Опишите вашу задачу", type="text")
+					.form-field.answer-form__field.answer-form__field--name
+						input.form-field__input(placeholder="Имя", type="text")
+					.form-field.answer-form__field.answer-form__field--phone
+						input.form-field__input.js-tel-input(placeholder="+7 (999) 999-99-99", type="tel")
+					a.answer-form__button.button.button--blue Отправить
+					
+				.answer-form__confid Нажимая на кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
+				.answer-form__required Заполните все поля.
+
+	section.partners
+		.container
+			h2.section-title Партнеры
+			.partners-slider.js-partners-slider
+				each val in [1, 2, 3, 4, 5]
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-1.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-2.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-3.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-4.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-5.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-6.jpg")
+
+
+

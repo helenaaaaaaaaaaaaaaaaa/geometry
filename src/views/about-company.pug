@@ -1,0 +1,88 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	section.specialization-company
+		.container.specialization-company__container
+			.specialization-company__inner
+				.specialization-company-left
+					h2.section-title Инвестиционная <br> Компания ГЕОМЕТРИЯ
+					p.specialization-company-left__subtitle Специализируемся на услугах <br> в сфере коммерческой недвижимости:
+				
+				
+				.specialization-slider-wrap
+					.specialization-slider.js-specialization-slider
+						.specialization-slider__item
+							img.specialization-slider__item-img(src="images/main/specialization-slider/slide-1.jpg", alt="")
+						.specialization-slider__item
+							img.specialization-slider__item-img(src="images/main/specialization-slider/slide-2.jpg", alt="")
+						.specialization-slider__item
+							img.specialization-slider__item-img(src="images/main/specialization-slider/slide-3.jpg", alt="")
+
+
+
+	include sections/clients-types.pug
+	.info-about
+		.container
+			.info-about-content
+				.info-about__col
+					.info-about__col-count › 300 000 кв.м.
+					.info-about__col-text торговой коммерческой недвижимости <br> в Петербурге, Ленинградской области, <br> Москве и Московской области.
+				.info-about__col
+					.info-about__col-text.info-about__col-text2 Мы и наши партнеры являемся собственниками коммерческой недвижимости, а так же наша компания является Арендатором Обьектов Городского комитета управления Имуществом (ГКУ) Санкт- Петербурга и  Департамента городского имущества (ДГИ) Москвы.
+
+	section.our-mission
+		//.our-mission__back
+			img.our-mission__back-img(src="", alt="")
+		.answer-box__back
+			img.answer-box__back-img(src="images/main/about-back.jpg", alt="")
+		.container
+			.our-mission__content
+				h1.our-mission__title.section-title наша миссия
+				p.our-mission__desc Найти идеальную локацию для вашего бизнеса. Сделать рынок коммерческой недвижимости доступным для инвесторов с различным бюджетом.
+
+	
+	section.answer-box(id="ex1")
+		
+		form.answer-form.answer-form--no-mt
+			h2.section-title.answer-form__title ПОЛУЧИТЕ ОТВЕТ ЭКСПЕРТА УЖЕ СЕГОДНЯ
+			.answer-form-wrap
+				.form-field.answer-form__field.answer-form__field--task
+					input.form-field__input(placeholder="Опишите вашу задачу", type="text")
+				.form-field.answer-form__field.answer-form__field--name
+					input.form-field__input(placeholder="Имя", type="text")
+				.form-field.answer-form__field.answer-form__field--phone
+					input.form-field__input.js-tel-input(placeholder="+7 (999) 999-99-99", type="tel")
+				a.answer-form__button.button.button--blue Отправить
+				
+			.answer-form__confid Нажимая на кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
+			.answer-form__required Заполните все поля.
+
+	section.partners
+		.container
+			h2.section-title Партнеры
+			.partners-slider.js-partners-slider
+				each val in [1, 2, 3, 4, 5]
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-1.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-2.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-3.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-4.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-5.jpg")
+					.partners-slider__item
+						img.partners-slider__item-img(src="images/main/partners-slider/slide-6.jpg")
+
+
+
