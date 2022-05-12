@@ -1,0 +1,43 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	section.contacts
+		.container
+			
+			
+			h1.contacts__title.section-title Контакты
+			.contacts-wrap
+				.contacts__info
+					.contacts__info-text
+						.contacts__info-city г. Москва
+						.contacts__info-street Щелковское шоссе, 100
+						.contacts__info-separator
+						a.num-item.num-item--mb16(href="tel:+74996850305") 8 (499) 685-03-05
+						a.num-item.num-item--mb24(href="tel:+79112617788") +7 (911) 261-77-88
+						a.site-footer-top__item-link.site-footer-top__item-link--black(href="mailto: info@geometry-invest.ru") info@geometry-invest.ru
+					.contacts-map
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac0f89f2a0f80c39b34dbc00b5a1ea3fcaac64894248712021d17b2f03c507b10&amp;source=constructor" frameborder="0"></iframe>
+
+
+				.contacts__info
+					.contacts__info-text
+						.contacts__info-city г. Санкт-Петербург
+						.contacts__info-street Бухарестская, 32
+						.contacts__info-separator
+						a.num-item.num-item--mb16(href="tel:+78126464701") 8 (812) 64-64-701
+						a.num-item.num-item--mb24(href="tel:+79112617788") +7 (911) 261-77-88
+						a.site-footer-top__item-link.site-footer-top__item-link--black(href="mailto: info@geometry-invest.ru") info@geometry-invest.ru
+					.contacts-map
+						<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A95061b9e30c31cb2c61fdd2a66ad40df9ccf01c0796b21fd94b526bf0066114d&amp;source=constructor" frameborder="0"></iframe>
+
+				
+

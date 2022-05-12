@@ -117,15 +117,15 @@
           <h2 class="section-title our-approach__title">Наш подход к работе</h2>
           <div class="features">
             <div class="features__item">
-              <div class="features__item-title"><img class="features__item-icon" src="/images/main/features/convenience-icon.svg" alt=""><span>Удобство</span></div>
+              <div class="features__item-title"><img class="features__item-icon" src="images/main/features/convenience-icon.svg" alt=""><span>Удобство</span></div>
               <div class="features__item-desc">У нас индивидуальный <br> подход к каждому клиенту.</div>
             </div>
             <div class="features__item">
-              <div class="features__item-title"><img class="features__item-icon" src="/images/main/features/review-icon.svg" alt=""><span>Анализ</span></div>
+              <div class="features__item-title"><img class="features__item-icon" src="images/main/features/review-icon.svg" alt=""><span>Анализ</span></div>
               <div class="features__item-desc">Проведем аналитическую работу по ликвидности объекта, предложим оптимальный объект и схему сделки.</div>
             </div>
             <div class="features__item">
-              <div class="features__item-title"><img class="features__item-icon" src="/images/main/features/partner-icon.svg" alt=""><span>Партнерство</span></div>
+              <div class="features__item-title"><img class="features__item-icon" src="images/main/features/partner-icon.svg" alt=""><span>Партнерство</span></div>
               <div class="features__item-desc">Работаем без комиссии. Предоставим оптимальные  локации для развития бизнеса.</div>
             </div>
           </div>
@@ -134,18 +134,19 @@
       <section class="answer-box" id="ex1">
         <div class="answer-box__back"><img class="answer-box__back-img" src="images/main/answer-bac.jpg" alt=""></div>
         <div class="container">
-          <form class="answer-form">
+          <form class="answer-form js-answer-form--validation" action=""> 
             <h2 class="section-title answer-form__title">ПОЛУЧИТЕ ОТВЕТ ЭКСПЕРТА УЖЕ СЕГОДНЯ</h2>
             <div class="answer-form-wrap">
               <div class="form-field answer-form__field answer-form__field--task">
-                <input class="form-field__input" placeholder="Опишите вашу задачу" type="text">
+                <input class="form-field__input" placeholder="Опишите вашу задачу" type="text" name="description">
               </div>
               <div class="form-field answer-form__field answer-form__field--name">
-                <input class="form-field__input" placeholder="Имя" type="text">
+                <input class="form-field__input" placeholder="Имя" type="text" name="yourname">
               </div>
               <div class="form-field answer-form__field answer-form__field--phone">
-                <input class="form-field__input js-tel-input" placeholder="+7 (999) 999-99-99" type="tel">
-              </div><a class="answer-form__button button button--blue">Отправить</a>
+                <input class="form-field__input js-tel-input" placeholder="+7 (999) 999-99-99" type="tel" name="yourphone">
+              </div>
+              <button class="answer-form__button button button--blue" type="submit">Отправить</button>
             </div>
             <div class="answer-form__confid">Нажимая на кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности</div>
             <div class="answer-form__required">Заполните все поля.</div>

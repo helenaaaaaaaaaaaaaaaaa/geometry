@@ -10,24 +10,258 @@ block vars
 
 
 block main
-	.container
-		input.js-range-slider-1(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target")
+	section.catalog
+		.container
+			h1.section-title каталог объектов
+			.catalog-inner
+				.catalog-row
+					.catalog-col
+						.catalog-col__item
+							.catalog-col__item-title Город
+							.catalog-col__item-content
+								.simple-select-wrap
+									select.js-simple-select(name="" data-placeholder="Выберите город") 
+										option
+										option(value="msk") Москва
+										option(value="spb") Санкт-Петербург
+									.simple-select-items-wrapper
+			
+						.catalog-col__item
+							.catalog-col__item-title Район
+							.catalog-col__item-content
+								.chb-with-filters
+									.chbwf-main
+										.chbwf-main__search 
+											input.inp.js-chbwf-inp(type="text" placeholder="Район")
+										.chbwf-main__container.js-simplebar-chbwf.chbwf-main__container--small-1
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp(type="checkbox", name="district" value="1" )
+													.custom-checkbox__square
+													.custom-checkbox__text Адмиралтейский район
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp(type="checkbox", name="district" value="2")
+													.custom-checkbox__square
+													.custom-checkbox__text Василеостровский район
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp(type="checkbox", name="district" value="3" )
+													.custom-checkbox__square
+													.custom-checkbox__text Всеволожский район
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp(type="checkbox", name="district" value="4")
+													.custom-checkbox__square
+													.custom-checkbox__text Выборгский район
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp(type="checkbox", name="district" value="5")
+													.custom-checkbox__square
+													.custom-checkbox__text Аренда1
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp(type="checkbox", name="district" value="6")
+													.custom-checkbox__square
+													.custom-checkbox__text Аренда2
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp(type="checkbox", name="district" value="7")
+													.custom-checkbox__square
+													.custom-checkbox__text Аренда3
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp(type="checkbox", name="district" value="8")
+													.custom-checkbox__square
+													.custom-checkbox__text Аренда4
+									.chbwf-bottom
 
-		.ion-rs-double
-			input.js-range-slider-double(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-to="5000000" data-target-from="irs-double-1-from" data-target-to="irs-double-1-to")
-			.ion-rs-double-inputs
-				input#irs-double-1-from.ion-rs-double-input.ion-rs-double-input--from(type="text")
-				input#irs-double-1-to.ion-rs-double-input.ion-rs-double-input--to(type="text")
+
+					.catalog-col
+						.catalog-col__item
+							.catalog-col__item-title Метро
+							.catalog-col__item-content
+								.chb-with-filters
+										.chbwf-main.chbwf-main--pb13
+											.chbwf-main__search 
+												input.inp.js-chbwf-inp(type="text" placeholder="Метро")
+											.chbwf-main__container.js-simplebar-chbwf.chbwf-main__container--big-2
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="district" value="1" )
+														.custom-checkbox__square
+														.custom-checkbox__text Автово
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="district" value="2")
+														.custom-checkbox__square
+														.custom-checkbox__text Адмиралтейская
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="district" value="3" )
+														.custom-checkbox__square
+														.custom-checkbox__text Академическая
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="district" value="4")
+														.custom-checkbox__square
+														.custom-checkbox__text Балтийская
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="district" value="5")
+														.custom-checkbox__square
+														.custom-checkbox__text Бухарестская
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="district" value="6")
+														.custom-checkbox__square
+														.custom-checkbox__text Василеостровская
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="district" value="7")
+														.custom-checkbox__square
+														.custom-checkbox__text Владимирская
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="district" value="8")
+														.custom-checkbox__square
+														.custom-checkbox__text Аренда4
+										.chbwf-bottom
+
+					.catalog-col.catalog-col--small
+						.catalog-col__item
+							.catalog-col__item-title.catalog-col__item-title--clr Форма сделки
+							.catalog-col__item-content
+								.custom-checkbox-wrap
+									label.custom-checkbox
+										input.custom-checkbox__inp(type="checkbox", name="")
+										.custom-checkbox__square
+										.custom-checkbox__text Аренда
+								.custom-checkbox-wrap
+									label.custom-checkbox
+										input.custom-checkbox__inp(type="checkbox", name="")
+										.custom-checkbox__square
+										.custom-checkbox__text Продажа
+								.custom-checkbox-wrap
+									label.custom-checkbox
+										input.custom-checkbox__inp(type="checkbox", name="")
+										.custom-checkbox__square
+										.custom-checkbox__text Продажа (коллективное инвестирование)
+						.catalog-col__item
+							.catalog-col__item-title.catalog-col__item-title--clr Тип объекта
+							.catalog-col__item-content
+								.custom-checkbox-wrap
+									label.custom-checkbox
+										input.custom-checkbox__inp(type="checkbox", name="")
+										.custom-checkbox__square
+										.custom-checkbox__text Офис
+								.custom-checkbox-wrap
+									label.custom-checkbox
+										input.custom-checkbox__inp(type="checkbox", name="")
+										.custom-checkbox__square
+										.custom-checkbox__text Торговая площадь
+								.custom-checkbox-wrap
+									label.custom-checkbox
+										input.custom-checkbox__inp(type="checkbox", name="")
+										.custom-checkbox__square
+										.custom-checkbox__text Свободного назначения
+					.catalog-col
+						.catalog-col__item
+							.catalog-col__item-title.catalog-col__item-title--clr Площадь, м/кв
+							.catalog-col__item-content.catalog-col__item-content--mt
+								.ion-rs-double
+									input.js-range-slider-double(type="text" data-min="0" data-max="1500" data-step="10" data-from="100" data-to="1290" data-target-from="irs-double-1-from" data-target-to="irs-double-1-to")
+									.ion-rs-double-inputs
+										input#irs-double-1-from.ion-rs-double-input.ion-rs-double-input--from(type="text")
+										input#irs-double-1-to.ion-rs-double-input.ion-rs-double-input--to(type="text")
+									
+						.catalog-col__item
+							.catalog-col__item-title.catalog-col__item-title--clr Стоимость, ₽
+							.catalog-col__item-content.catalog-col__item-content--mt
+								.ion-rs-double
+									input.js-range-slider-double(type="text" data-min="1000" data-max="16601000" data-step="1000" data-from="1200000" data-to="15600000" data-target-from="irs-double-2-from" data-target-to="irs-double-2-to")
+									.ion-rs-double-inputs
+										input#irs-double-2-from.ion-rs-double-input.ion-rs-double-input--from(type="text")
+										input#irs-double-2-to.ion-rs-double-input.ion-rs-double-input--to(type="text")
+				
+
+				
 
 
+				
 
-		.ion-rs-double
-			input.js-range-slider-double(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-to="5000000" data-target-from="irs-double-2-from" data-target-to="irs-double-2-to")
-			.ion-rs-double-inputs
-				input#irs-double-2-from.ion-rs-double-input.ion-rs-double-input--from(type="text")
-				input#irs-double-2-to.ion-rs-double-input.ion-rs-double-input--to(type="text")
-
-
+					
+			.list-objects
+				h4.list-objects__title Список объектов
+				table.list-objects__table
+					tr.list-objects__table-row
+						td.list-objects__table-col.list-objects__table-col--code
+						td.list-objects__table-col.list-objects__table-col--object Объект
+						td.list-objects__table-col.list-objects__table-col--address Адрес
+						td.list-objects__table-col.list-objects__table-col--metro Метро
+						td.list-objects__table-col.list-objects__table-col--obj-type Тип объекта
+						td.list-objects__table-col.list-objects__table-col--deal-type Тип сделки
+						td.list-objects__table-col.list-objects__table-col--floor Этаж
+						td.list-objects__table-col.list-objects__table-col--area Площадь
+						td.list-objects__table-col.list-objects__table-col--price Стоимость
+					tr.list-objects__table-row
+						td.list-objects__table-col.list-objects__table-col--code 
+							.table-text 94
+						td.list-objects__table-col.list-objects__table-col--object
+							img.table-image(src="images/objects-table/object-img.jpg", alt="")
+						td.list-objects__table-col.list-objects__table-col--address
+							.table-text г. Санкт-Петербург, Адмиралтейский район, Сувороский, 61
+							.table-geos
+								.table-geo
+									img.table-geo__img(src="images/objects-table/geo-icon1.svg", alt="")
+									a.table-geo__link Смотреть на карте
+								.table-geo
+									img.table-geo__img(src="images/objects-table/geo-icon2.svg", alt="")
+									a.table-geo__link Смотреть на панораме
+						td.list-objects__table-col.list-objects__table-col--metro
+							.table-text Василеостровская
+						td.list-objects__table-col.list-objects__table-col--obj-type
+							.table-text Свободное назначение
+						td.list-objects__table-col.list-objects__table-col--deal-type
+							.table-text Торговая<br> площадь
+						td.list-objects__table-col.list-objects__table-col--floor
+						td.list-objects__table-col.list-objects__table-col--area
+							.table-text 102 кв/м
+						td.list-objects__table-col.list-objects__table-col--price
+							.cost
+								.cost__rent Аренда 2500 руб. кв/м
+								.cost__month Месяц за 250 000 ₽ 
+						
+						
+						
+					tr.list-objects__table-row
+						td.list-objects__table-col.list-objects__table-col--code 
+							.table-text 148
+						td.list-objects__table-col.list-objects__table-col--object
+							img.table-image(src="images/objects-table/object-img.jpg", alt="")
+						td.list-objects__table-col.list-objects__table-col--address
+							.table-text г. Москва, Адмиралтейский район, Сувороский, 61
+							.table-geos
+								.table-geo
+									img.table-geo__img(src="images/objects-table/geo-icon1.svg", alt="")
+									a.table-geo__link Смотреть на карте
+								.table-geo
+									img.table-geo__img(src="images/objects-table/geo-icon2.svg", alt="")
+									a.table-geo__link Смотреть на панораме
+						td.list-objects__table-col.list-objects__table-col--metro
+							.table-text Василеостровская
+						td.list-objects__table-col.list-objects__table-col--obj-type
+							.table-text Торговая<br> площадь
+						td.list-objects__table-col.list-objects__table-col--deal-type
+							.table-text Продажа (коллективное ивестирование)
+						td.list-objects__table-col.list-objects__table-col--floor
+						td.list-objects__table-col.list-objects__table-col--area
+							.table-text 102 кв/м
+						td.list-objects__table-col.list-objects__table-col--price
+							.cost
+								.cost__rent Аренда 2500 руб. кв/м
+								.cost__month Месяц за 250 000 ₽
+								a.cost__link Рассчитать прибыль
 
 
 

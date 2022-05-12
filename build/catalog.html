@@ -33,23 +33,334 @@
       <div class="sh-burger"><span></span></div>
     </header>
     <main class="main">
-      <div class="container">
-        <input class="js-range-slider-1" type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target">
-        <div class="ion-rs-double">
-          <input class="js-range-slider-double" type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-to="5000000" data-target-from="irs-double-1-from" data-target-to="irs-double-1-to">
-          <div class="ion-rs-double-inputs">
-            <input class="ion-rs-double-input ion-rs-double-input--from" id="irs-double-1-from" type="text">
-            <input class="ion-rs-double-input ion-rs-double-input--to" id="irs-double-1-to" type="text">
+      <section class="catalog">
+        <div class="container">
+          <h1 class="section-title">каталог объектов</h1>
+          <div class="catalog-inner">
+            <div class="catalog-row">
+              <div class="catalog-col">
+                <div class="catalog-col__item">
+                  <div class="catalog-col__item-title">Город</div>
+                  <div class="catalog-col__item-content">
+                    <div class="simple-select-wrap">
+                      <select class="js-simple-select" name="" data-placeholder="Выберите город"> 
+                        <option></option>
+                        <option value="msk">Москва</option>
+                        <option value="spb">Санкт-Петербург</option>
+                      </select>
+                      <div class="simple-select-items-wrapper"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-col__item">
+                  <div class="catalog-col__item-title">Район</div>
+                  <div class="catalog-col__item-content">
+                    <div class="chb-with-filters">
+                      <div class="chbwf-main">
+                        <div class="chbwf-main__search"> 
+                          <input class="inp js-chbwf-inp" type="text" placeholder="Район">
+                        </div>
+                        <div class="chbwf-main__container js-simplebar-chbwf chbwf-main__container--small-1">
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="1">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Адмиралтейский район</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="2">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Василеостровский район</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="3">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Всеволожский район</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="4">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Выборгский район</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="5">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Аренда1</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="6">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Аренда2</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="7">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Аренда3</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="8">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Аренда4</div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chbwf-bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-col">
+                <div class="catalog-col__item">
+                  <div class="catalog-col__item-title">Метро</div>
+                  <div class="catalog-col__item-content">
+                    <div class="chb-with-filters">
+                      <div class="chbwf-main chbwf-main--pb13">
+                        <div class="chbwf-main__search"> 
+                          <input class="inp js-chbwf-inp" type="text" placeholder="Метро">
+                        </div>
+                        <div class="chbwf-main__container js-simplebar-chbwf chbwf-main__container--big-2">
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="1">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Автово</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="2">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Адмиралтейская</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="3">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Академическая</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="4">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Балтийская</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="5">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Бухарестская</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="6">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Василеостровская</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="7">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Владимирская</div>
+                            </label>
+                          </div>
+                          <div class="chbwf-main__item">
+                            <label class="custom-checkbox">
+                              <input class="custom-checkbox__inp" type="checkbox" name="district" value="8">
+                              <div class="custom-checkbox__square"></div>
+                              <div class="custom-checkbox__text">Аренда4</div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="chbwf-bottom"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-col catalog-col--small">
+                <div class="catalog-col__item">
+                  <div class="catalog-col__item-title catalog-col__item-title--clr">Форма сделки</div>
+                  <div class="catalog-col__item-content">
+                    <div class="custom-checkbox-wrap">
+                      <label class="custom-checkbox">
+                        <input class="custom-checkbox__inp" type="checkbox" name="">
+                        <div class="custom-checkbox__square"></div>
+                        <div class="custom-checkbox__text">Аренда</div>
+                      </label>
+                    </div>
+                    <div class="custom-checkbox-wrap">
+                      <label class="custom-checkbox">
+                        <input class="custom-checkbox__inp" type="checkbox" name="">
+                        <div class="custom-checkbox__square"></div>
+                        <div class="custom-checkbox__text">Продажа</div>
+                      </label>
+                    </div>
+                    <div class="custom-checkbox-wrap">
+                      <label class="custom-checkbox">
+                        <input class="custom-checkbox__inp" type="checkbox" name="">
+                        <div class="custom-checkbox__square"></div>
+                        <div class="custom-checkbox__text">Продажа (коллективное инвестирование)</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-col__item">
+                  <div class="catalog-col__item-title catalog-col__item-title--clr">Тип объекта</div>
+                  <div class="catalog-col__item-content">
+                    <div class="custom-checkbox-wrap">
+                      <label class="custom-checkbox">
+                        <input class="custom-checkbox__inp" type="checkbox" name="">
+                        <div class="custom-checkbox__square"></div>
+                        <div class="custom-checkbox__text">Офис</div>
+                      </label>
+                    </div>
+                    <div class="custom-checkbox-wrap">
+                      <label class="custom-checkbox">
+                        <input class="custom-checkbox__inp" type="checkbox" name="">
+                        <div class="custom-checkbox__square"></div>
+                        <div class="custom-checkbox__text">Торговая площадь</div>
+                      </label>
+                    </div>
+                    <div class="custom-checkbox-wrap">
+                      <label class="custom-checkbox">
+                        <input class="custom-checkbox__inp" type="checkbox" name="">
+                        <div class="custom-checkbox__square"></div>
+                        <div class="custom-checkbox__text">Свободного назначения</div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="catalog-col">
+                <div class="catalog-col__item">
+                  <div class="catalog-col__item-title catalog-col__item-title--clr">Площадь, м/кв</div>
+                  <div class="catalog-col__item-content catalog-col__item-content--mt">
+                    <div class="ion-rs-double">
+                      <input class="js-range-slider-double" type="text" data-min="0" data-max="1500" data-step="10" data-from="100" data-to="1290" data-target-from="irs-double-1-from" data-target-to="irs-double-1-to">
+                      <div class="ion-rs-double-inputs">
+                        <input class="ion-rs-double-input ion-rs-double-input--from" id="irs-double-1-from" type="text">
+                        <input class="ion-rs-double-input ion-rs-double-input--to" id="irs-double-1-to" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-col__item">
+                  <div class="catalog-col__item-title catalog-col__item-title--clr">Стоимость, ₽</div>
+                  <div class="catalog-col__item-content catalog-col__item-content--mt">
+                    <div class="ion-rs-double">
+                      <input class="js-range-slider-double" type="text" data-min="1000" data-max="16601000" data-step="1000" data-from="1200000" data-to="15600000" data-target-from="irs-double-2-from" data-target-to="irs-double-2-to">
+                      <div class="ion-rs-double-inputs">
+                        <input class="ion-rs-double-input ion-rs-double-input--from" id="irs-double-2-from" type="text">
+                        <input class="ion-rs-double-input ion-rs-double-input--to" id="irs-double-2-to" type="text">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="list-objects">
+            <h4 class="list-objects__title">Список объектов</h4>
+            <table class="list-objects__table">
+              <tr class="list-objects__table-row">
+                <td class="list-objects__table-col list-objects__table-col--code"></td>
+                <td class="list-objects__table-col list-objects__table-col--object">Объект</td>
+                <td class="list-objects__table-col list-objects__table-col--address">Адрес</td>
+                <td class="list-objects__table-col list-objects__table-col--metro">Метро</td>
+                <td class="list-objects__table-col list-objects__table-col--obj-type">Тип объекта</td>
+                <td class="list-objects__table-col list-objects__table-col--deal-type">Тип сделки</td>
+                <td class="list-objects__table-col list-objects__table-col--floor">Этаж</td>
+                <td class="list-objects__table-col list-objects__table-col--area">Площадь</td>
+                <td class="list-objects__table-col list-objects__table-col--price">Стоимость</td>
+              </tr>
+              <tr class="list-objects__table-row">
+                <td class="list-objects__table-col list-objects__table-col--code"> 
+                  <div class="table-text">94</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--object"><img class="table-image" src="images/objects-table/object-img.jpg" alt=""></td>
+                <td class="list-objects__table-col list-objects__table-col--address">
+                  <div class="table-text">г. Санкт-Петербург, Адмиралтейский район, Сувороский, 61</div>
+                  <div class="table-geos">
+                    <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon1.svg" alt=""><a class="table-geo__link">Смотреть на карте</a></div>
+                    <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon2.svg" alt=""><a class="table-geo__link">Смотреть на панораме</a></div>
+                  </div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--metro">
+                  <div class="table-text">Василеостровская</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--obj-type">
+                  <div class="table-text">Свободное назначение</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--deal-type">
+                  <div class="table-text">Торговая<br> площадь</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--floor"></td>
+                <td class="list-objects__table-col list-objects__table-col--area">
+                  <div class="table-text">102 кв/м</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--price">
+                  <div class="cost">
+                    <div class="cost__rent">Аренда 2500 руб. кв/м</div>
+                    <div class="cost__month">Месяц за 250 000 ₽ </div>
+                  </div>
+                </td>
+              </tr>
+              <tr class="list-objects__table-row">
+                <td class="list-objects__table-col list-objects__table-col--code"> 
+                  <div class="table-text">148</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--object"><img class="table-image" src="images/objects-table/object-img.jpg" alt=""></td>
+                <td class="list-objects__table-col list-objects__table-col--address">
+                  <div class="table-text">г. Москва, Адмиралтейский район, Сувороский, 61</div>
+                  <div class="table-geos">
+                    <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon1.svg" alt=""><a class="table-geo__link">Смотреть на карте</a></div>
+                    <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon2.svg" alt=""><a class="table-geo__link">Смотреть на панораме</a></div>
+                  </div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--metro">
+                  <div class="table-text">Василеостровская</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--obj-type">
+                  <div class="table-text">Торговая<br> площадь</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--deal-type">
+                  <div class="table-text">Продажа (коллективное ивестирование)</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--floor"></td>
+                <td class="list-objects__table-col list-objects__table-col--area">
+                  <div class="table-text">102 кв/м</div>
+                </td>
+                <td class="list-objects__table-col list-objects__table-col--price">
+                  <div class="cost">
+                    <div class="cost__rent">Аренда 2500 руб. кв/м</div>
+                    <div class="cost__month">Месяц за 250 000 ₽</div><a class="cost__link">Рассчитать прибыль</a>
+                  </div>
+                </td>
+              </tr>
+            </table>
           </div>
         </div>
-        <div class="ion-rs-double">
-          <input class="js-range-slider-double" type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-to="5000000" data-target-from="irs-double-2-from" data-target-to="irs-double-2-to">
-          <div class="ion-rs-double-inputs">
-            <input class="ion-rs-double-input ion-rs-double-input--from" id="irs-double-2-from" type="text">
-            <input class="ion-rs-double-input ion-rs-double-input--to" id="irs-double-2-to" type="text">
-          </div>
-        </div>
-      </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="container">

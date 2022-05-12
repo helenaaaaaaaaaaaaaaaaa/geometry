@@ -52,19 +52,20 @@ block main
 	
 	section.answer-box(id="ex1")
 		
-		form.answer-form.js-answer-form--validation(action="") 
-			h2.section-title.answer-form__title ПОЛУЧИТЕ ОТВЕТ ЭКСПЕРТА УЖЕ СЕГОДНЯ
-			.answer-form-wrap
-				.form-field.answer-form__field.answer-form__field--task
-					input.form-field__input(placeholder="Опишите вашу задачу", type="text", name="description")
-				.form-field.answer-form__field.answer-form__field--name
-					input.form-field__input(placeholder="Имя", type="text", name="yourname")
-				.form-field.answer-form__field.answer-form__field--phone
-					input.form-field__input.js-tel-input(placeholder="+7 (999) 999-99-99", type="tel", name="yourphone")
-				button.answer-form__button.button.button--blue(type="submit") Отправить
-				
-			.answer-form__confid Нажимая на кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
-			.answer-form__required Заполните все поля.
+		form.answer-form.js-answer-form--validation.answer-form--about(action="") 
+			.container.container--about-answer
+				h2.section-title.answer-form__title ПОЛУЧИТЕ ОТВЕТ ЭКСПЕРТА УЖЕ СЕГОДНЯ
+				.answer-form-wrap
+					.form-field.answer-form__field.answer-form__field--task
+						input.form-field__input(placeholder="Опишите вашу задачу", type="text", name="description")
+					.form-field.answer-form__field.answer-form__field--name
+						input.form-field__input(placeholder="Имя", type="text", name="yourname")
+					.form-field.answer-form__field.answer-form__field--phone
+						input.form-field__input.js-tel-input(placeholder="+7 (999) 999-99-99", type="tel", name="yourphone")
+					button.answer-form__button.button.button--blue(type="submit") Отправить
+					
+				.answer-form__confid Нажимая на кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
+				.answer-form__required Заполните все поля.
 
 	section.partners
 		.container

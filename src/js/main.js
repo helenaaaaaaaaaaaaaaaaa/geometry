@@ -5,6 +5,9 @@
 //= libs/slick.min.js
 //= libs/vanillaTextMask.js
 //= libs/ion.rangeSlider.min.js
+//= libs/select2.min.js
+//= libs/select2-ru.js
+//= libs/simplebar.min.js
 
 /* my scripts */
 

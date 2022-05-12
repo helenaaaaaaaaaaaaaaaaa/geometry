@@ -96,7 +96,7 @@
 .our-mission{
 	background: #F5F5F5;
 	&__content{
-		padding: 74px 106px;
+		padding: 73px 106px 64px 106px;
 		background: #fff;
 		text-align: center;
 		position: relative;
@@ -107,7 +107,7 @@
 		font-weight: 400;
 		font-size: 24px;
 		line-height: 145%;
-		margin-top: 40px;
+		margin-top: 44px;
 
 		text-align: center;
 
@@ -115,3 +115,13 @@
 	}
 }
 	
+.answer-form--about{
+	margin-top: 0px;
+	padding: 99px 0;
+	
+}
+
+
+.container--about-answer{
+	width: 1036px;
+}
