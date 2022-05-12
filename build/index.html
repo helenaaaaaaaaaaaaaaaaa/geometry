@@ -48,15 +48,15 @@
                   <div class="calc-invest__name">Сумма вложений</div>
                   <div class="calc-invest__val" id="range-slider-1-target">1 000 000 ₽</div>
                   <div class="calc-invest__range-slider">
-                    <input class="js-range-slider-1" type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target">
+                    <input class="js-range-slider-1" type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target" data-percent="range-slider-1-percent" data-target-price="range-slider-1-target-price">
                   </div>
                 </div>
                 <div class="calc-month">
-                  <div class="calc-month__val">99 000 ₽</div>
+                  <div class="calc-month__val" id="range-slider-1-target-price">99 000 ₽</div>
                   <div class="calc-month__name">Доход в месяц</div>
                 </div>
                 <div class="calc-year">
-                  <div class="calc-year__val">10%</div>
+                  <div class="calc-year__val" id="range-slider-1-percent">10%</div>
                   <div class="calc-year__name">Доход в год</div>
                 </div>
               </div><a class="promo-right__button button">Заполнить анкету</a>
@@ -72,13 +72,8 @@
             <div class="clients-type-front__name">Собственнику</div>
           </div>
           <div class="clients-type-hidden">
-            <div class="clients-type-hidden__top"> 
-              <div class="clients-type-hidden__top-name">Собственнику</div><img class="clients-type-hidden__top-bg" src="images/main/clients-types/back.jpg" alt="">
-            </div>
-            <div class="clients-type-hidden__bottom"> 
-              <div class="clients-type-hidden__btn">Сдать</div>
-              <div class="clients-type-hidden__btn clients-type-hidden__btn--light">Продать</div>
-            </div>
+            <div class="clients-type-hidden__top"> <a class="clients-type-hidden__top-name" href="">Собственнику</a><img class="clients-type-hidden__top-bg" src="images/main/clients-types/back.jpg" alt=""></div>
+            <div class="clients-type-hidden__bottom"> <a class="clients-type-hidden__btn" href="">Сдать</a><a class="clients-type-hidden__btn clients-type-hidden__btn--light" href="">Продать</a></div>
           </div>
         </div>
         <div class="clients-type">
@@ -87,13 +82,8 @@
             <div class="clients-type-front__name">Арендатору</div>
           </div>
           <div class="clients-type-hidden">
-            <div class="clients-type-hidden__top"> 
-              <div class="clients-type-hidden__top-name">Арендатору</div><img class="clients-type-hidden__top-bg" src="images/main/clients-types/back.jpg" alt="">
-            </div>
-            <div class="clients-type-hidden__bottom"> 
-              <div class="clients-type-hidden__btn">Снять</div>
-              <div class="clients-type-hidden__btn clients-type-hidden__btn--light">Сдать</div>
-            </div>
+            <div class="clients-type-hidden__top"> <a class="clients-type-hidden__top-name" href="">Арендатору</a><img class="clients-type-hidden__top-bg" src="images/main/clients-types/back.jpg" alt=""></div>
+            <div class="clients-type-hidden__bottom"> <a class="clients-type-hidden__btn" href="">Снять</a><a class="clients-type-hidden__btn clients-type-hidden__btn--light" href="">Сдать</a></div>
           </div>
         </div>
         <div class="clients-type">
@@ -102,13 +92,8 @@
             <div class="clients-type-front__name">Инвестору</div>
           </div>
           <div class="clients-type-hidden">
-            <div class="clients-type-hidden__top"> 
-              <div class="clients-type-hidden__top-name">Инвестору</div><img class="clients-type-hidden__top-bg" src="images/main/clients-types/back.jpg" alt="">
-            </div>
-            <div class="clients-type-hidden__bottom"> 
-              <div class="clients-type-hidden__btn">Купить</div>
-              <div class="clients-type-hidden__btn clients-type-hidden__btn--light">Купить с партнерами</div>
-            </div>
+            <div class="clients-type-hidden__top"> <a class="clients-type-hidden__top-name" href="">Инвестору</a><img class="clients-type-hidden__top-bg" src="images/main/clients-types/back.jpg" alt=""></div>
+            <div class="clients-type-hidden__bottom"> <a class="clients-type-hidden__btn" href="">Купить</a><a class="clients-type-hidden__btn clients-type-hidden__btn--light" href="">Купить с партнерами</a></div>
           </div>
         </div>
       </section>
@@ -148,8 +133,18 @@
               </div>
               <button class="answer-form__button button button--blue" type="submit">Отправить</button>
             </div>
-            <div class="answer-form__confid">Нажимая на кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности</div>
             <div class="answer-form__required">Заполните все поля.</div>
+            <div class="answer-form__confid"> 
+              <div class="answer-form__confid-text">Нажимая на кнопку «Отправить» вы соглашаетесь с <a class="answer-form__confid-link" href=""> политикой конфиденциальности</a></div>
+            </div>
+            <div class="answer-form__connect">
+              <div class="answer-form__connect-text">напишите нам в удобном для вас мессенджере</div>
+              <ul class="social"> 
+                <li class="social__item social__item--green"><a class="social__item-link"><img src="images/header/bot/social/whatsapp.svg" alt=""></a></li>
+                <li class="social__item social__item--blue"><a class="social__item-link"><img src="images/header/bot/social/telegram.svg" alt=""></a></li>
+                <li class="social__item social__item--viol"><a class="social__item-link"> <img src="images/header/bot/social/viber.svg" alt=""></a></li>
+              </ul>
+            </div>
           </form>
         </div>
       </section>

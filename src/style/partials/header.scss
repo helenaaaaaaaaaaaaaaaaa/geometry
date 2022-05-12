@@ -107,6 +107,10 @@
 			display: block;
 			margin-right: 50px;
 			cursor: pointer;
+			transition-duration: .3s;
+			&:hover{
+				color: #306fc7;
+			}
 
 		}
 	}

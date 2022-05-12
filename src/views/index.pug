@@ -28,12 +28,12 @@ block main
 							.calc-invest__val#range-slider-1-target 1 000 000 ₽
 							
 							.calc-invest__range-slider
-								input.js-range-slider-1(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target")
+								input.js-range-slider-1(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target" data-percent="range-slider-1-percent" data-target-price="range-slider-1-target-price")
 						.calc-month
-							.calc-month__val 99 000 ₽
+							.calc-month__val#range-slider-1-target-price 99 000 ₽
 							.calc-month__name Доход в месяц
 						.calc-year
-							.calc-year__val 10%
+							.calc-year__val#range-slider-1-percent 10%
 							.calc-year__name Доход в год
 					a.promo-right__button.button Заполнить анкету
 
@@ -77,8 +77,23 @@ block main
 						input.form-field__input.js-tel-input(placeholder="+7 (999) 999-99-99", type="tel", name="yourphone")
 					button.answer-form__button.button.button--blue(type="submit") Отправить
 					
-				.answer-form__confid Нажимая на кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
 				.answer-form__required Заполните все поля.
+				.answer-form__confid  
+					.answer-form__confid-text Нажимая на кнопку «Отправить» вы соглашаетесь с 
+						a.answer-form__confid-link(href="")  политикой конфиденциальности
+				.answer-form__connect
+					.answer-form__connect-text напишите нам в удобном для вас мессенджере
+					ul.social 
+						li.social__item.social__item--green
+							a.social__item-link
+								img(src="images/header/bot/social/whatsapp.svg", alt="")
+						li.social__item.social__item--blue
+							a.social__item-link
+								img(src="images/header/bot/social/telegram.svg", alt="")
+						li.social__item.social__item--viol
+							a.social__item-link 
+								img(src="images/header/bot/social/viber.svg", alt="")
+				
 
 	section.partners
 		.container

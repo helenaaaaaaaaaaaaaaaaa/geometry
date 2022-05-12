@@ -33,7 +33,11 @@ $(document).ready(function () {
 		skin: "round irs--custom",
 		onChange: function (data) {
 			var target = "#" + $(data.input).attr('data-target');
-			$(target).html(data.from.toLocaleString() + " ₽");
+			//var target = "#" + $(data.input).attr('data-percent');
+			var percent = parseInt($("#" + $(data.input).attr('data-percent')).text());
+			$(target).html(Math.floor(data.from).toLocaleString() + " ₽");
+			var targetPrice = $("#" + $(data.input).attr('data-target-price'));
+			$(targetPrice).html(Math.floor((data.from/100*percent/12)).toLocaleString() + " ₽");
 		},
 	});
 
