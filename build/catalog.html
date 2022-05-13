@@ -282,81 +282,149 @@
           <div class="list-objects">
             <h4 class="list-objects__title">Список объектов</h4>
             <table class="list-objects__table">
-              <tr class="list-objects__table-row">
-                <td class="list-objects__table-col list-objects__table-col--code"></td>
-                <td class="list-objects__table-col list-objects__table-col--object">Объект</td>
-                <td class="list-objects__table-col list-objects__table-col--address">Адрес</td>
-                <td class="list-objects__table-col list-objects__table-col--metro">Метро</td>
-                <td class="list-objects__table-col list-objects__table-col--obj-type">Тип объекта</td>
-                <td class="list-objects__table-col list-objects__table-col--deal-type">Тип сделки</td>
-                <td class="list-objects__table-col list-objects__table-col--floor">Этаж</td>
-                <td class="list-objects__table-col list-objects__table-col--area">Площадь</td>
-                <td class="list-objects__table-col list-objects__table-col--price">Стоимость</td>
-              </tr>
-              <tr class="list-objects__table-row">
-                <td class="list-objects__table-col list-objects__table-col--code"> 
-                  <div class="table-text">94</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--object"><img class="table-image" src="images/objects-table/object-img.jpg" alt=""></td>
-                <td class="list-objects__table-col list-objects__table-col--address">
-                  <div class="table-text">г. Санкт-Петербург, Адмиралтейский район, Сувороский, 61</div>
-                  <div class="table-geos">
-                    <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon1.svg" alt=""><a class="table-geo__link">Смотреть на карте</a></div>
-                    <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon2.svg" alt=""><a class="table-geo__link">Смотреть на панораме</a></div>
-                  </div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--metro">
-                  <div class="table-text">Василеостровская</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--obj-type">
-                  <div class="table-text">Свободное назначение</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--deal-type">
-                  <div class="table-text">Торговая<br> площадь</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--floor"></td>
-                <td class="list-objects__table-col list-objects__table-col--area">
-                  <div class="table-text">102 кв/м</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--price">
-                  <div class="cost">
-                    <div class="cost__rent">Аренда 2500 руб. кв/м</div>
-                    <div class="cost__month">Месяц за 250 000 ₽ </div>
-                  </div>
-                </td>
-              </tr>
-              <tr class="list-objects__table-row">
-                <td class="list-objects__table-col list-objects__table-col--code"> 
-                  <div class="table-text">148</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--object"><img class="table-image" src="images/objects-table/object-img.jpg" alt=""></td>
-                <td class="list-objects__table-col list-objects__table-col--address">
-                  <div class="table-text">г. Москва, Адмиралтейский район, Сувороский, 61</div>
-                  <div class="table-geos">
-                    <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon1.svg" alt=""><a class="table-geo__link">Смотреть на карте</a></div>
-                    <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon2.svg" alt=""><a class="table-geo__link">Смотреть на панораме</a></div>
-                  </div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--metro">
-                  <div class="table-text">Василеостровская</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--obj-type">
-                  <div class="table-text">Торговая<br> площадь</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--deal-type">
-                  <div class="table-text">Продажа (коллективное ивестирование)</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--floor"></td>
-                <td class="list-objects__table-col list-objects__table-col--area">
-                  <div class="table-text">102 кв/м</div>
-                </td>
-                <td class="list-objects__table-col list-objects__table-col--price">
-                  <div class="cost">
-                    <div class="cost__rent">Аренда 2500 руб. кв/м</div>
-                    <div class="cost__month">Месяц за 250 000 ₽</div><a class="cost__link">Рассчитать прибыль</a>
-                  </div>
-                </td>
-              </tr>
+              <tbody> 
+                <tr class="list-objects__table-row list-objects__table-row--heading">
+                  <td class="list-objects__table-col list-objects__table-col--code"></td>
+                  <td class="list-objects__table-col list-objects__table-col--object">Объект</td>
+                  <td class="list-objects__table-col list-objects__table-col--address">Адрес</td>
+                  <td class="list-objects__table-col list-objects__table-col--metro">Метро</td>
+                  <td class="list-objects__table-col list-objects__table-col--obj-type">Тип объекта</td>
+                  <td class="list-objects__table-col list-objects__table-col--deal-type">Тип сделки</td>
+                  <td class="list-objects__table-col list-objects__table-col--floor">Этаж</td>
+                  <td class="list-objects__table-col list-objects__table-col--area">Площадь</td>
+                  <td class="list-objects__table-col list-objects__table-col--price">Стоимость</td>
+                </tr>
+                <tr class="list-objects__table-row">
+                  <td class="list-objects__table-col list-objects__table-col--code"> 
+                    <div class="table-text">94</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--object"><img class="table-image" src="images/objects-table/object-img.jpg" alt=""></td>
+                  <td class="list-objects__table-col list-objects__table-col--address">
+                    <div class="table-text">г. Санкт-Петербург, Адмиралтейский район, Сувороский, 61</div>
+                    <div class="table-geos">
+                      <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon1.svg" alt=""><a class="table-geo__link">Смотреть на карте</a></div>
+                      <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon2.svg" alt=""><a class="table-geo__link">Смотреть на панораме</a></div>
+                    </div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--metro">
+                    <div class="table-text">Василеостровская</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--obj-type">
+                    <div class="table-text">Свободное назначение</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--deal-type">
+                    <div class="table-text">Торговая<br> площадь</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--floor"></td>
+                  <td class="list-objects__table-col list-objects__table-col--area">
+                    <div class="table-text">102 кв/м</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--price">
+                    <div class="cost">
+                      <div class="cost__rent">Аренда 2500 руб. кв/м</div>
+                      <div class="cost__month">Месяц за 250 000 ₽ </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="list-objects__table-row">
+                  <td class="list-objects__table-col list-objects__table-col--code"> 
+                    <div class="table-text">148</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--object"><img class="table-image" src="images/objects-table/object-img.jpg" alt=""></td>
+                  <td class="list-objects__table-col list-objects__table-col--address">
+                    <div class="table-text">г. Москва, Адмиралтейский район, Сувороский, 61</div>
+                    <div class="table-geos">
+                      <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon1.svg" alt=""><a class="table-geo__link">Смотреть на карте</a></div>
+                      <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon2.svg" alt=""><a class="table-geo__link">Смотреть на панораме</a></div>
+                    </div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--metro">
+                    <div class="table-text">Василеостровская</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--obj-type">
+                    <div class="table-text">Торговая<br> площадь</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--deal-type">
+                    <div class="table-text">Продажа (коллективное ивестирование)</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--floor"></td>
+                  <td class="list-objects__table-col list-objects__table-col--area">
+                    <div class="table-text">102 кв/м</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--price">
+                    <div class="cost">
+                      <div class="cost__rent">Аренда 2500 руб. кв/м</div>
+                      <div class="cost__month">Месяц за 250 000 ₽</div>
+                    </div>
+                    <div class="cost__link-wrap"><a class="cost__link">Рассчитать прибыль</a></div>
+                  </td>
+                </tr>
+                <tr class="list-objects__table-row">
+                  <td class="list-objects__table-col list-objects__table-col--code"> 
+                    <div class="table-text">94</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--object"><img class="table-image" src="images/objects-table/object-img.jpg" alt=""></td>
+                  <td class="list-objects__table-col list-objects__table-col--address">
+                    <div class="table-text">г. Санкт-Петербург, Адмиралтейский район, Сувороский, 61</div>
+                    <div class="table-geos">
+                      <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon1.svg" alt=""><a class="table-geo__link">Смотреть на карте</a></div>
+                      <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon2.svg" alt=""><a class="table-geo__link">Смотреть на панораме</a></div>
+                    </div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--metro">
+                    <div class="table-text">Василеостровская</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--obj-type">
+                    <div class="table-text">Свободное назначение</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--deal-type">
+                    <div class="table-text">Торговая<br> площадь</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--floor"></td>
+                  <td class="list-objects__table-col list-objects__table-col--area">
+                    <div class="table-text">102 кв/м</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--price">
+                    <div class="cost">
+                      <div class="cost__rent">Аренда 2500 руб. кв/м</div>
+                      <div class="cost__month">Месяц за 250 000 ₽ </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="list-objects__table-row">
+                  <td class="list-objects__table-col list-objects__table-col--code"> 
+                    <div class="table-text">148</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--object"><img class="table-image" src="images/objects-table/object-img.jpg" alt=""></td>
+                  <td class="list-objects__table-col list-objects__table-col--address">
+                    <div class="table-text">г. Москва, Адмиралтейский район, Сувороский, 61</div>
+                    <div class="table-geos">
+                      <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon1.svg" alt=""><a class="table-geo__link">Смотреть на карте</a></div>
+                      <div class="table-geo"><img class="table-geo__img" src="images/objects-table/geo-icon2.svg" alt=""><a class="table-geo__link">Смотреть на панораме</a></div>
+                    </div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--metro">
+                    <div class="table-text">Василеостровская</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--obj-type">
+                    <div class="table-text">Торговая<br> площадь</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--deal-type">
+                    <div class="table-text">Продажа (коллективное ивестирование)</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--floor"></td>
+                  <td class="list-objects__table-col list-objects__table-col--area">
+                    <div class="table-text">102 кв/м</div>
+                  </td>
+                  <td class="list-objects__table-col list-objects__table-col--price">
+                    <div class="cost">
+                      <div class="cost__rent">Аренда 2500 руб. кв/м</div>
+                      <div class="cost__month">Месяц за 250 000 ₽</div>
+                    </div>
+                    <div class="cost__link-wrap"><a class="cost__link">Рассчитать прибыль</a></div>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
@@ -377,9 +445,9 @@
               </button>
             </div>
             <ul class="social socials-footer">
-              <li class="social__item social__item--green"><a class="social__item-link"><img src="images/header/bot/social/whatsapp.svg" alt=""></a></li>
-              <li class="social__item social__item--blue"><a class="social__item-link"><img src="images/header/bot/social/telegram.svg" alt=""></a></li>
-              <li class="social__item social__item--viol"><a class="social__item-link"> <img src="images/header/bot/social/viber.svg" alt=""></a></li>
+              <li class="social__item social__item--green social__item--sf"><a class="social__item-link"><img src="images/header/bot/social/whatsapp.svg" alt=""></a></li>
+              <li class="social__item social__item--blue social__item--sf"><a class="social__item-link"><img src="images/header/bot/social/telegram.svg" alt=""></a></li>
+              <li class="social__item social__item--viol social__item--sf"><a class="social__item-link"> <img src="images/header/bot/social/viber.svg" alt=""></a></li>
             </ul>
           </div>
         </div>

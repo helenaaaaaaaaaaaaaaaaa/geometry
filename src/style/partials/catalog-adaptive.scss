@@ -1,0 +1,212 @@
+@media screen and (max-width:1249px) {
+
+	.list-objects {
+		padding-top: 80px;
+		padding-bottom: 163px;
+		margin-left: auto;
+		margin-right: auto;
+
+		&__title {
+			font-weight: 400;
+			font-size: 30px;
+			line-height: 110%;
+			color: #292929;
+
+		}
+
+		&__table {
+			margin-top: 25px;
+			width: 100%;
+			font-weight: 400;
+			font-size: 14px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+
+			tbody {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+
+			&-row {
+				display: flex;
+				flex-direction: column;
+				border-bottom: 1px solid #D7D7D7;
+				padding: 20px 0;
+				width: calc(50% - 20px);
+
+				&--heading {
+					display: none !important;
+				}
+			}
+
+			&-col {
+				width: 100%;
+				padding: 5px 5px;
+				display: flex;
+				flex-wrap: wrap;
+
+				&::before {
+					display: inline-block;
+					margin-right: 10px;
+					line-height: 1.45;
+					color: #292929;
+				}
+
+				&--code {
+					display: flex;
+					justify-content: center;
+					text-align: center;
+
+					&::before {
+						content: 'Номер';
+					}
+				}
+
+				&--object {
+					&::before {}
+				}
+
+				&--address {
+					&::before {
+						content: 'Адрес: ';
+					}
+
+					.table-text {
+						width: 100%;
+					}
+				}
+
+				&--metro {
+					&::before {
+						content: 'Метро: ';
+					}
+				}
+
+				&--obj-type {
+					&::before {
+						content: 'Тип объекта: ';
+					}
+				}
+
+				&--deal-type {
+					&::before {
+						content: 'Тип сделки: ';
+					}
+				}
+
+				&--floor {
+					&::before {
+						content: 'Этаж: ';
+					}
+				}
+
+				&--area {
+					&::before {
+						content: 'Площадь: ';
+					}
+				}
+
+				&--price {
+					&::before {
+						display: block;
+						width: 100%;
+						margin-bottom: 10px;
+						content: 'Стоимость: ';
+					}
+				}
+
+
+			}
+
+
+		}
+	}
+
+	.table-image {
+		width: 100%;
+		height: auto;
+	}
+
+	.table-geos {
+		margin-top: 6px;
+	}
+
+
+	.table-geo {
+		display: flex;
+		align-items: center;
+
+		&__img {
+			margin-right: 4px;
+			width: 16px;
+			height: 16px;
+		}
+
+		&__link {
+
+			border-bottom: 1px dashed #2E358D;
+			cursor: pointer;
+		}
+
+		&:not(:first-child) {
+			margin-top: 4px;
+		}
+
+	}
+
+	.table-text {
+		color: #000000;
+		line-height: 145%;
+
+		br {
+			display: none !important;
+		}
+
+		//word-break: break-all;
+	}
+
+	.cost {
+		margin-right: 20px;
+
+		&__rent,
+		&__month {}
+
+		&__rent {}
+
+		&__month {
+			margin-bottom: 0;
+		}
+
+		&__link {}
+
+		margin-bottom: 15px;
+	}
+
+	.cost__link-wrap {
+		display: block;
+		text-align: center;
+		flex-grow: 100000;
+		align-self: center;
+		margin-top: -6px;
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (max-width:830px) {
+	.cost {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:690px) {
+	.list-objects__table-row {
+		width: calc(50% - 7px);
+	}
+}
+@media screen and (max-width:600px) {
+	.list-objects__table-row {
+		width: 100%;
+	}
+}

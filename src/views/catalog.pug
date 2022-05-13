@@ -194,74 +194,139 @@ block main
 			.list-objects
 				h4.list-objects__title Список объектов
 				table.list-objects__table
-					tr.list-objects__table-row
-						td.list-objects__table-col.list-objects__table-col--code
-						td.list-objects__table-col.list-objects__table-col--object Объект
-						td.list-objects__table-col.list-objects__table-col--address Адрес
-						td.list-objects__table-col.list-objects__table-col--metro Метро
-						td.list-objects__table-col.list-objects__table-col--obj-type Тип объекта
-						td.list-objects__table-col.list-objects__table-col--deal-type Тип сделки
-						td.list-objects__table-col.list-objects__table-col--floor Этаж
-						td.list-objects__table-col.list-objects__table-col--area Площадь
-						td.list-objects__table-col.list-objects__table-col--price Стоимость
-					tr.list-objects__table-row
-						td.list-objects__table-col.list-objects__table-col--code 
-							.table-text 94
-						td.list-objects__table-col.list-objects__table-col--object
-							img.table-image(src="images/objects-table/object-img.jpg", alt="")
-						td.list-objects__table-col.list-objects__table-col--address
-							.table-text г. Санкт-Петербург, Адмиралтейский район, Сувороский, 61
-							.table-geos
-								.table-geo
-									img.table-geo__img(src="images/objects-table/geo-icon1.svg", alt="")
-									a.table-geo__link Смотреть на карте
-								.table-geo
-									img.table-geo__img(src="images/objects-table/geo-icon2.svg", alt="")
-									a.table-geo__link Смотреть на панораме
-						td.list-objects__table-col.list-objects__table-col--metro
-							.table-text Василеостровская
-						td.list-objects__table-col.list-objects__table-col--obj-type
-							.table-text Свободное назначение
-						td.list-objects__table-col.list-objects__table-col--deal-type
-							.table-text Торговая<br> площадь
-						td.list-objects__table-col.list-objects__table-col--floor
-						td.list-objects__table-col.list-objects__table-col--area
-							.table-text 102 кв/м
-						td.list-objects__table-col.list-objects__table-col--price
-							.cost
-								.cost__rent Аренда 2500 руб. кв/м
-								.cost__month Месяц за 250 000 ₽ 
-						
-						
-						
-					tr.list-objects__table-row
-						td.list-objects__table-col.list-objects__table-col--code 
-							.table-text 148
-						td.list-objects__table-col.list-objects__table-col--object
-							img.table-image(src="images/objects-table/object-img.jpg", alt="")
-						td.list-objects__table-col.list-objects__table-col--address
-							.table-text г. Москва, Адмиралтейский район, Сувороский, 61
-							.table-geos
-								.table-geo
-									img.table-geo__img(src="images/objects-table/geo-icon1.svg", alt="")
-									a.table-geo__link Смотреть на карте
-								.table-geo
-									img.table-geo__img(src="images/objects-table/geo-icon2.svg", alt="")
-									a.table-geo__link Смотреть на панораме
-						td.list-objects__table-col.list-objects__table-col--metro
-							.table-text Василеостровская
-						td.list-objects__table-col.list-objects__table-col--obj-type
-							.table-text Торговая<br> площадь
-						td.list-objects__table-col.list-objects__table-col--deal-type
-							.table-text Продажа (коллективное ивестирование)
-						td.list-objects__table-col.list-objects__table-col--floor
-						td.list-objects__table-col.list-objects__table-col--area
-							.table-text 102 кв/м
-						td.list-objects__table-col.list-objects__table-col--price
-							.cost
-								.cost__rent Аренда 2500 руб. кв/м
-								.cost__month Месяц за 250 000 ₽
-								a.cost__link Рассчитать прибыль
+					tbody 
+						tr.list-objects__table-row.list-objects__table-row--heading
+							td.list-objects__table-col.list-objects__table-col--code
+							td.list-objects__table-col.list-objects__table-col--object Объект
+							td.list-objects__table-col.list-objects__table-col--address Адрес
+							td.list-objects__table-col.list-objects__table-col--metro Метро
+							td.list-objects__table-col.list-objects__table-col--obj-type Тип объекта
+							td.list-objects__table-col.list-objects__table-col--deal-type Тип сделки
+							td.list-objects__table-col.list-objects__table-col--floor Этаж
+							td.list-objects__table-col.list-objects__table-col--area Площадь
+							td.list-objects__table-col.list-objects__table-col--price Стоимость
+						tr.list-objects__table-row
+							td.list-objects__table-col.list-objects__table-col--code 
+								.table-text 94
+							td.list-objects__table-col.list-objects__table-col--object
+								img.table-image(src="images/objects-table/object-img.jpg", alt="")
+							td.list-objects__table-col.list-objects__table-col--address
+								.table-text г. Санкт-Петербург, Адмиралтейский район, Сувороский, 61
+								.table-geos
+									.table-geo
+										img.table-geo__img(src="images/objects-table/geo-icon1.svg", alt="")
+										a.table-geo__link Смотреть на карте
+									.table-geo
+										img.table-geo__img(src="images/objects-table/geo-icon2.svg", alt="")
+										a.table-geo__link Смотреть на панораме
+							td.list-objects__table-col.list-objects__table-col--metro
+								.table-text Василеостровская
+							td.list-objects__table-col.list-objects__table-col--obj-type
+								.table-text Свободное назначение
+							td.list-objects__table-col.list-objects__table-col--deal-type
+								.table-text Торговая<br> площадь
+							td.list-objects__table-col.list-objects__table-col--floor
+							td.list-objects__table-col.list-objects__table-col--area
+								.table-text 102 кв/м
+							td.list-objects__table-col.list-objects__table-col--price
+								.cost
+									.cost__rent Аренда 2500 руб. кв/м
+									.cost__month Месяц за 250 000 ₽ 
+							
+							
+							
+						tr.list-objects__table-row
+							td.list-objects__table-col.list-objects__table-col--code 
+								.table-text 148
+							td.list-objects__table-col.list-objects__table-col--object
+								img.table-image(src="images/objects-table/object-img.jpg", alt="")
+							td.list-objects__table-col.list-objects__table-col--address
+								.table-text г. Москва, Адмиралтейский район, Сувороский, 61
+								.table-geos
+									.table-geo
+										img.table-geo__img(src="images/objects-table/geo-icon1.svg", alt="")
+										a.table-geo__link Смотреть на карте
+									.table-geo
+										img.table-geo__img(src="images/objects-table/geo-icon2.svg", alt="")
+										a.table-geo__link Смотреть на панораме
+							td.list-objects__table-col.list-objects__table-col--metro
+								.table-text Василеостровская
+							td.list-objects__table-col.list-objects__table-col--obj-type
+								.table-text Торговая<br> площадь
+							td.list-objects__table-col.list-objects__table-col--deal-type
+								.table-text Продажа (коллективное ивестирование)
+							td.list-objects__table-col.list-objects__table-col--floor
+							td.list-objects__table-col.list-objects__table-col--area
+								.table-text 102 кв/м
+							td.list-objects__table-col.list-objects__table-col--price
+								.cost
+									.cost__rent Аренда 2500 руб. кв/м
+									.cost__month Месяц за 250 000 ₽
+
+								.cost__link-wrap
+									a.cost__link Рассчитать прибыль
+
+
+
+						tr.list-objects__table-row
+							td.list-objects__table-col.list-objects__table-col--code 
+								.table-text 94
+							td.list-objects__table-col.list-objects__table-col--object
+								img.table-image(src="images/objects-table/object-img.jpg", alt="")
+							td.list-objects__table-col.list-objects__table-col--address
+								.table-text г. Санкт-Петербург, Адмиралтейский район, Сувороский, 61
+								.table-geos
+									.table-geo
+										img.table-geo__img(src="images/objects-table/geo-icon1.svg", alt="")
+										a.table-geo__link Смотреть на карте
+									.table-geo
+										img.table-geo__img(src="images/objects-table/geo-icon2.svg", alt="")
+										a.table-geo__link Смотреть на панораме
+							td.list-objects__table-col.list-objects__table-col--metro
+								.table-text Василеостровская
+							td.list-objects__table-col.list-objects__table-col--obj-type
+								.table-text Свободное назначение
+							td.list-objects__table-col.list-objects__table-col--deal-type
+								.table-text Торговая<br> площадь
+							td.list-objects__table-col.list-objects__table-col--floor
+							td.list-objects__table-col.list-objects__table-col--area
+								.table-text 102 кв/м
+							td.list-objects__table-col.list-objects__table-col--price
+								.cost
+									.cost__rent Аренда 2500 руб. кв/м
+									.cost__month Месяц за 250 000 ₽ 
+							
+							
+							
+						tr.list-objects__table-row
+							td.list-objects__table-col.list-objects__table-col--code 
+								.table-text 148
+							td.list-objects__table-col.list-objects__table-col--object
+								img.table-image(src="images/objects-table/object-img.jpg", alt="")
+							td.list-objects__table-col.list-objects__table-col--address
+								.table-text г. Москва, Адмиралтейский район, Сувороский, 61
+								.table-geos
+									.table-geo
+										img.table-geo__img(src="images/objects-table/geo-icon1.svg", alt="")
+										a.table-geo__link Смотреть на карте
+									.table-geo
+										img.table-geo__img(src="images/objects-table/geo-icon2.svg", alt="")
+										a.table-geo__link Смотреть на панораме
+							td.list-objects__table-col.list-objects__table-col--metro
+								.table-text Василеостровская
+							td.list-objects__table-col.list-objects__table-col--obj-type
+								.table-text Торговая<br> площадь
+							td.list-objects__table-col.list-objects__table-col--deal-type
+								.table-text Продажа (коллективное ивестирование)
+							td.list-objects__table-col.list-objects__table-col--floor
+							td.list-objects__table-col.list-objects__table-col--area
+								.table-text 102 кв/м
+							td.list-objects__table-col.list-objects__table-col--price
+								.cost
+									.cost__rent Аренда 2500 руб. кв/м
+									.cost__month Месяц за 250 000 ₽
+								.cost__link-wrap
+									a.cost__link Рассчитать прибыль
 
 
 

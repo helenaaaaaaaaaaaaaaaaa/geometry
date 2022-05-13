@@ -48,3 +48,151 @@
 		
 	}
 }
+
+
+@media screen and (min-width:1250px){
+
+	.list-objects {
+		padding-top: 80px;
+		padding-bottom: 163px;
+	
+		&__title {
+			font-weight: 400;
+			font-size: 30px;
+			line-height: 110%;
+			color: #292929;
+	
+		}
+	
+		&__table {
+			margin-top: 25px;
+			width: 100%;
+			font-weight: 400;
+			font-size: 14px;
+			border-spacing: 0;
+			border-collapse: collapse;
+	
+			&-row {}
+	
+			&-col {
+				padding-left: 28px;
+				padding-bottom: 15px;
+				padding-top: 13px;
+				border-bottom: 1px solid #D7D7D7;
+				vertical-align: top;
+	
+				&--code {
+					width: 23px;
+					padding-left: 0;
+				}
+	
+				&--object {
+					width: 183px;
+					padding-left: 22px;
+				}
+	
+				&--address {
+					width: 206px;
+				}
+	
+				&--metro {
+					width: 150px;
+					padding-left: 21px;
+				}
+	
+				&--obj-type {
+					padding-left: 25px;
+					width: 110px;
+				}
+	
+				&--deal-type {
+					padding-left: 23px;
+					width: 131px;
+				}
+	
+				&--floor {
+					width: 65px;
+				}
+	
+				&--area {
+					width: 107px;
+				}
+	
+				&--price {
+					padding-left: 15px;
+					width: 173px;
+				}
+	
+	
+			}
+	
+	
+		}
+	}
+	
+	.table-image {
+		width: 100%;
+		height: auto;
+	}
+	
+	.table-geos {
+		margin-top: 30px;
+	}
+	
+}
+
+	
+.table-geo {
+	display: flex;
+	align-items: center;
+
+	&__img {
+		margin-right: 4px;
+		width: 16px;
+		height: 16px;
+	}
+
+	&__link {
+
+		border-bottom: 1px dashed #2E358D;
+		cursor: pointer;
+	}
+
+	&:not(:first-child) {
+		margin-top: 4px;
+	}
+}
+
+.table-text {
+	color: #000000;
+	line-height: 145%;
+	//word-break: break-all;
+}
+
+.cost {
+	&__rent, &__month {
+		padding: 3px 4px 4px 4px;
+	}
+
+	&__rent {
+		color: #FFFFFF;
+		border-radius: 3px;
+		background: #306FC7;
+		margin-bottom: 4px;
+
+	}
+
+	&__month {
+		color: #292929;
+
+		background: #F5F5F5;
+		border: 1px solid #306FC7;
+		border-radius: 3px;
+		margin-bottom: 32px;
+	}
+
+	&__link {
+		border-bottom: 1px dashed #2E358D;
+		cursor: pointer;
+	}
+}
