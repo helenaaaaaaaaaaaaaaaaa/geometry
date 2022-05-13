@@ -64,8 +64,22 @@ block main
 						input.form-field__input.js-tel-input(placeholder="+7 (999) 999-99-99", type="tel", name="yourphone")
 					button.answer-form__button.button.button--blue(type="submit") Отправить
 					
-				.answer-form__confid Нажимая на кнопку «Отправить» вы соглашаетесь с политикой конфиденциальности
 				.answer-form__required Заполните все поля.
+				.answer-form__confid  
+					.answer-form__confid-text Нажимая на кнопку «Отправить» вы соглашаетесь с 
+						a.answer-form__confid-link(href="")  политикой конфиденциальности
+				.answer-form__connect
+					.answer-form__connect-text напишите нам в удобном для вас мессенджере
+					ul.social 
+						li.social__item.social__item--green
+							a.social__item-link
+								img(src="images/header/bot/social/whatsapp.svg", alt="")
+						li.social__item.social__item--blue
+							a.social__item-link
+								img(src="images/header/bot/social/telegram.svg", alt="")
+						li.social__item.social__item--viol
+							a.social__item-link 
+								img(src="images/header/bot/social/viber.svg", alt="")
 
 	section.partners
 		.container
