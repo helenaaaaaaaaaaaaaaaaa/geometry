@@ -1,0 +1,58 @@
+@media screen and (max-width: 1000px){
+	.contacts {
+		padding-top: 40px;
+		padding-bottom: 70px;
+	}
+	.contacts__info,  .site-footer-top__item-link--black{
+		font-size: 16px;
+		&-city{
+			font-size: 24px;
+		}
+	}
+	.num-item--mb24, .contacts__info-separator, .contacts__info-street{
+		margin-bottom: 19px;
+	}
+}
+@media screen and (max-width: 960px){
+	.contacts {
+		
+		&__title{
+			margin-bottom: 30px;
+		}
+	}
+}
+@media screen and (max-width: 720px){
+	.contacts{
+		&-wrap{
+			flex-wrap: wrap;
+			flex-direction: column;
+			margin-left: 0px;
+		}
+		&__info{
+			width: 100%;
+			margin-top: 24px;
+			margin-left: 0px;
+		}
+		&__title{
+			margin-bottom: 0px;
+		}
+		&-map{
+			margin-top: 20px;
+		}
+		
+	}
+}
+
+@media screen and (max-width: 430px){
+	.contacts__info, .site-footer-top__item-link--black{
+		font-size: 14px;
+		
+		&-city{
+			font-size: 20px;
+		}
+	}
+	.num-item--mb24, .contacts__info-separator, .contacts__info-street{
+		margin-bottom: 14px;
+	}
+}
+	

@@ -1,21 +1,25 @@
-.specialization-company{
-	&__container{
-		max-width: calc(100% - 30px);
-		margin-right: 0;
-		width: calc(1160px / 2 + 50vw);
-
+.specialization-company {
+	&__container {
+		@media screen and (min-width: 1201px) {
+			max-width: calc(100% - 30px);
+			margin-right: 0;
+			width: calc(1160px / 2 + 50vw);
+		}
 	}
-	&__inner{
+
+	&__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: stretch;
 	}
-	&-left{
+
+	&-left {
 		padding-top: 120px;
 		padding-bottom: 120px;
-		
+
 		width: 580px;
-		&__subtitle{
+
+		&__subtitle {
 			font-weight: 400;
 			font-size: 30px;
 			line-height: 110%;
@@ -24,24 +28,30 @@
 		}
 	}
 }
-.specialization-slider-wrap{
+
+.specialization-slider-wrap {
 	background: #000;
 	width: 600px;
 	max-width: calc(100% - 581px - 60px);
 }
-.specialization-slider{
+
+.specialization-slider {
 	width: 100%;
 	height: 100%;
-	.slick-list, .slick-track{
+
+	.slick-list,
+	.slick-track {
 		height: 100%;
 	}
-	&__item{
-	}
+
+	&__item {}
 }
-.specialization-slider__item{
+
+.specialization-slider__item {
 	height: 100%;
 	position: relative;
-	&-img{
+
+	&-img {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -53,26 +63,29 @@
 
 }
 
-.info-about{
+.info-about {
 	padding-top: 160px;
 	padding-bottom: 160px;
-	&-content{
+
+	&-content {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		
+
 	}
-	&__col{
-		&:nth-child(1){
+
+	&__col {
+		&:nth-child(1) {
 			width: 514px;
 			margin-right: 35px;
 		}
-		&:nth-child(2){
+
+		&:nth-child(2) {
 			max-width: 447px;
 		}
 
-		
-		&-count{
+
+		&-count {
 			font-weight: 400;
 			font-size: 50px;
 			line-height: 110%;
@@ -80,22 +93,25 @@
 			color: #306FC7;
 			margin-bottom: 30px;
 		}
-		&-text{
+
+		&-text {
 			font-weight: 400;
 			font-size: 24px;
 			line-height: 145%;
 			color: #292929;
 			margin-top: 27px;
 		}
-		&-text2{
+
+		&-text2 {
 			font-size: 18px;
 		}
 	}
 }
 
-.our-mission{
+.our-mission {
 	background: #F5F5F5;
-	&__content{
+
+	&__content {
 		padding: 73px 106px 64px 106px;
 		background: #fff;
 		text-align: center;
@@ -103,7 +119,8 @@
 		margin-top: -261px;
 		z-index: 3;
 	}
-	&__desc{
+
+	&__desc {
 		font-weight: 400;
 		font-size: 24px;
 		line-height: 145%;
@@ -114,14 +131,14 @@
 		color: #000000;
 	}
 }
-	
-.answer-form--about{
+
+.answer-form--about {
 	margin-top: 0px;
 	padding: 99px 0;
-	
+
 }
 
 
-.container--about-answer{
+.container--about-answer {
 	width: 1036px;
 }

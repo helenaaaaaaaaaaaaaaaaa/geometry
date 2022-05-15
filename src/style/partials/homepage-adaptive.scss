@@ -34,7 +34,7 @@
 	}
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1258px){
 	.our-approach {
 		padding-top: 73px;
 		padding-bottom: 73px;
@@ -70,9 +70,11 @@
 		flex-wrap: wrap;
 		justify-content: start;
 		margin-top: 28px;
+		margin-left: 0px;
 		&__item{
 			width: 100%;
 			margin-top: 24px;
+			margin-left: 0px;
 			&-desc{
 				margin-top: 10px;
 				font-size: 16px;
