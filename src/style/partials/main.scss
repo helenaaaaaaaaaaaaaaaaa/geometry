@@ -103,9 +103,14 @@ body {
 	-webkit-locale: auto;
 	white-space: normal;
 
+
 	&.compensate-for-scrollbar {
 		overflow: hidden;
 	}
+	
+}
+.body-fixed {
+	overflow: hidden;
 }
 
 html {

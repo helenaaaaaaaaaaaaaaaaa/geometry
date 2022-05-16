@@ -8,6 +8,18 @@
     <meta property="og:image" content="images/logo.svg">
     <meta name="format-detection" content="telephone=no">
     <link href="css/main.css" rel="stylesheet">
+    <script>
+      // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+      let vh = window.innerHeight * 0.01;
+      // Then we set the value in the --vh custom property to the root of the document
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      // We listen to the resize event
+      window.addEventListener('resize', () => {
+      // We execute the same script as before
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
+    </script>
     <!--title= `${page.title}`-->
   </head>
   <body>
@@ -16,21 +28,23 @@
         <div class="header-top"><a class="header-top-logo logo" href="/"><img src="images/header/top/ht-logo.svg" alt=""></a>
           <div class="header-top-right"> 
             <div class="num header-top-right__item"><a class="num__item num-item" href="tel:+74996850305">8 (499) 685-03-05</a><a class="num__item num-item" href="tel:+78126464701">8 (812) 64-64-701</a></div>
-            <div class="call-back header-top-right__item"><a class="call-back-link call-back-link--dark" href="#ex1">Перезвоните мне</a></div><a class="login header-top-right__item button">Войти</a>
+            <div class="call-back header-top-right__item"><a class="call-back-link call-back-link--dark" href="#ex1">Перезвоните мне</a></div><a class="login header-top-right__item button login--mob">Войти</a>
+            <div class="sh-burger"><span></span></div>
           </div>
         </div>
         <div class="header-bottom">
           <nav class="menu">
             <div class="menu__list"><a class="menu__list-link" href="">Услуги</a><a class="menu__list-link" href="">Каталог объектов</a><a class="menu__list-link" href="">О компании</a><a class="menu__list-link" href="">Контакты</a></div>
           </nav>
-          <ul class="social"> 
+          <div class="num header-top-right__item header-top-right__item--mob"><a class="num__item num-item" href="tel:+74996850305">8 (499) 685-03-05</a><a class="num__item num-item" href="tel:+78126464701">8 (812) 64-64-701</a></div>
+          <div class="call-back header-top-right__item header-top-right__item--mob2"><a class="call-back-link call-back-link--dark" href="#ex1">Перезвоните мне</a></div>
+          <ul class="social social-menu--mob">
             <li class="social__item social__item--green"><a class="social__item-link"><img src="images/header/bot/social/whatsapp.svg" alt=""></a></li>
             <li class="social__item social__item--blue"><a class="social__item-link"><img src="images/header/bot/social/telegram.svg" alt=""></a></li>
             <li class="social__item social__item--viol"><a class="social__item-link"> <img src="images/header/bot/social/viber.svg" alt=""></a></li>
           </ul>
         </div>
       </div>
-      <div class="sh-burger"><span></span></div>
     </header>
     <main class="main">
       <section class="specialization-company">
