@@ -19,6 +19,9 @@
       let vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
       });
+      
+      //!!!Изменить при натяжке
+      const homepageLink='/geometry/build/';
     </script>
     <!--title= `${page.title}`-->
   </head>
@@ -208,12 +211,12 @@
           <div class="site-footer-top__item"><a class="site-footer-top__item-link" href="">Услуги</a><a class="site-footer-top__item-link" href="/geometry/build/catalog.html">Каталог объектов</a><a class="site-footer-top__item-link" href="/geometry/build/about-company.html">О компании</a><a class="site-footer-top__item-link" href="/geometry/build/contacts.html">Контакты</a></div>
           <div class="site-footer-top__item">
             <div class="site-footer-top__item-link site-footer-top__item-link--news">Новостная рассылка</div>
-            <div class="form-field form-field--sf">
-              <input class="form-field__input form-field__input--sf" placeholder="E-mail" type="email">
+            <form class="form-field form-field--sf" action=""> 
+              <input class="form-field__input form-field__input--sf js-input-valid" placeholder="E-mail" type="email" required="required">
               <button class="form-field__button">
                 <div class="form-field__button-icon"> <img src="images/footer/button-icon.svg" alt=""></div>
               </button>
-            </div>
+            </form>
             <ul class="social socials-footer">
               <li class="social__item social__item--green social__item--sf"><a class="social__item-link"><img src="images/header/bot/social/whatsapp.svg" alt=""></a></li>
               <li class="social__item social__item--blue social__item--sf"><a class="social__item-link"><img src="images/header/bot/social/telegram.svg" alt=""></a></li>

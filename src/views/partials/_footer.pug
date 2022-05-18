@@ -20,8 +20,8 @@ footer.site-footer
 
 			.site-footer-top__item
 				.site-footer-top__item-link.site-footer-top__item-link--news Новостная рассылка
-				.form-field.form-field--sf
-					input.form-field__input.form-field__input--sf(placeholder="E-mail", type="email")
+				form.form-field.form-field--sf(action="") 
+					input.form-field__input.form-field__input--sf.js-input-valid(placeholder="E-mail", type="email"  required="required")
 					button.form-field__button
 						.form-field__button-icon 
 							img(src="images/footer/button-icon.svg", alt="")

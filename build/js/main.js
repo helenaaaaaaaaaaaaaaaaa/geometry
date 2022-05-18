@@ -190,11 +190,27 @@ $(document).ready(function () {
 
 	$("a[href*='#']:not([href='#'])").on("click", function (event) {
 		event.preventDefault();
-		var id = $(this).attr('href'),
-			top = $(id).offset().top;
-		$('body,html').animate({
-			scrollTop: top
-		}, 1500);
+
+
+		var id = $(this).attr('href');
+
+		if( $(id).length>0){//если элемент есть
+			var	top = $(id).offset().top;
+			$('body,html').animate({
+				scrollTop: top
+			}, 1500);
+		}
+		else{			
+			var path=document.location.pathname;
+
+			//не на главной ли мы странице
+			if(!(path===homepageLink ||  path === homepageLink.slice(0, -1) || path===homepageLink+'index.html' || path===homepageLink+'index.php')){
+				document.location.href=homepageLink+id;
+			}
+		}
+
+
+
 	});
 
 	$('.js-specialization-slider').slick({
@@ -316,4 +332,24 @@ $(document).ready(function () {
 	
 
 	});
+	$('.clients-type').click(function(){
+		var $this= $(this);
+		
+		
+		$this.addClass('clients-type--active').siblings().removeClass('clients-type--active');
+
+		
+	});
+});
+
+$(document).ready(function () {
+	/*$('.js-input-valid').on('blur', function () {
+		let email = $(this).val();
+		
+		if (email.length > 0
+		&& (email.match(/.+?\@.+/g) || []).length !== 1) {
+		  console.log('invalid');
+		  alert('Вы ввели некорректный e-mail!');
+		} 
+	});*/
 });
