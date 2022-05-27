@@ -169,9 +169,19 @@
 	
 	.clients-type{
 		padding: 0;
+		&:nth-child(2n){
+			.clients-type-front{
+				display: none;
+			}
+		}
+		&:nth-child(2n-1){
+			.clients-type-hidden__top{
+				display: none;
+			}
+		}
 		&-front{
-			display: none;
-			padding: 40px 5px;
+			//padding: 40px 5px;
+			padding: 35px 5px;
 			&__name{
 				font-size: 20px;
 			}
@@ -185,7 +195,8 @@
 			opacity: 1;
 			pointer-events: all;
 			&__top{
-				padding: 40px 5px;
+				//padding: 40px 5px;
+				padding: 61px 5px;
 			}
 			&__top-name{
 				font-size: 20px;
