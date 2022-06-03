@@ -1,0 +1,20 @@
+extends layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'index.html'
+		};
+
+
+
+
+block main
+	section.contacts
+		.container
+			.test-modals
+				.button.button--blue.js-open-modal(data-src="#order-popup-leaseObject") сдать
+				.button.button--blue.js-open-modal(data-src="#order-popup-rentObject") снять
+				.button.button--blue.js-open-modal(data-src="#order-popup-buy") купить
+				.button.button--blue.js-open-modal(data-src="#order-popup-sell") продать
+				.button.button--blue.js-open-modal(data-src="#order-popup-program") разработаем

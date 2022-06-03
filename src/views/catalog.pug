@@ -20,20 +20,25 @@ block main
 							.catalog-col__item-title Город
 							.catalog-col__item-content
 								.simple-select-wrap
-									select.js-simple-select(name="" data-placeholder="Выберите город") 
+									select.js-simple-select(name="" data-placeholder="Выберите город")
 										option
 										option(value="msk") Москва
 										option(value="spb") Санкт-Петербург
 									.simple-select-items-wrapper
-			
+
 						.catalog-col__item
 							.catalog-col__item-title Район
 							.catalog-col__item-content
 								.chb-with-filters
 									.chbwf-main
-										.chbwf-main__search 
+										.chbwf-main__search
 											input.inp.js-chbwf-inp(type="text" placeholder="Район")
 										.chbwf-main__container.js-simplebar-chbwf.chbwf-main__container--small-1
+											.chbwf-main__item
+												label.custom-checkbox
+													input.custom-checkbox__inp.js-custom-checkbox__inp-all(type="checkbox", name="district-all" value="all" )
+													.custom-checkbox__square
+													.custom-checkbox__text Все
 											.chbwf-main__item
 												label.custom-checkbox
 													input.custom-checkbox__inp(type="checkbox", name="district" value="1" )
@@ -83,47 +88,52 @@ block main
 							.catalog-col__item-content
 								.chb-with-filters
 										.chbwf-main.chbwf-main--pb13
-											.chbwf-main__search 
+											.chbwf-main__search
 												input.inp.js-chbwf-inp(type="text" placeholder="Метро")
 											.chbwf-main__container.js-simplebar-chbwf.chbwf-main__container--big-2
 												.chbwf-main__item
 													label.custom-checkbox
-														input.custom-checkbox__inp(type="checkbox", name="district" value="1" )
+														input.custom-checkbox__inp.js-custom-checkbox__inp-all(type="checkbox", name="metro-all" value="all" )
+														.custom-checkbox__square
+														.custom-checkbox__text Все
+												.chbwf-main__item
+													label.custom-checkbox
+														input.custom-checkbox__inp(type="checkbox", name="metro" value="1" )
 														.custom-checkbox__square
 														.custom-checkbox__text Автово
 												.chbwf-main__item
 													label.custom-checkbox
-														input.custom-checkbox__inp(type="checkbox", name="district" value="2")
+														input.custom-checkbox__inp(type="checkbox", name="metro" value="2")
 														.custom-checkbox__square
 														.custom-checkbox__text Адмиралтейская
 												.chbwf-main__item
 													label.custom-checkbox
-														input.custom-checkbox__inp(type="checkbox", name="district" value="3" )
+														input.custom-checkbox__inp(type="checkbox", name="metro" value="3" )
 														.custom-checkbox__square
 														.custom-checkbox__text Академическая
 												.chbwf-main__item
 													label.custom-checkbox
-														input.custom-checkbox__inp(type="checkbox", name="district" value="4")
+														input.custom-checkbox__inp(type="checkbox", name="metro" value="4")
 														.custom-checkbox__square
 														.custom-checkbox__text Балтийская
 												.chbwf-main__item
 													label.custom-checkbox
-														input.custom-checkbox__inp(type="checkbox", name="district" value="5")
+														input.custom-checkbox__inp(type="checkbox", name="metro" value="5")
 														.custom-checkbox__square
 														.custom-checkbox__text Бухарестская
 												.chbwf-main__item
 													label.custom-checkbox
-														input.custom-checkbox__inp(type="checkbox", name="district" value="6")
+														input.custom-checkbox__inp(type="checkbox", name="metro" value="6")
 														.custom-checkbox__square
 														.custom-checkbox__text Василеостровская
 												.chbwf-main__item
 													label.custom-checkbox
-														input.custom-checkbox__inp(type="checkbox", name="district" value="7")
+														input.custom-checkbox__inp(type="checkbox", name="metro" value="7")
 														.custom-checkbox__square
 														.custom-checkbox__text Владимирская
 												.chbwf-main__item
 													label.custom-checkbox
-														input.custom-checkbox__inp(type="checkbox", name="district" value="8")
+														input.custom-checkbox__inp(type="checkbox", name="metro" value="8")
 														.custom-checkbox__square
 														.custom-checkbox__text Аренда4
 										.chbwf-bottom
@@ -134,17 +144,17 @@ block main
 							.catalog-col__item-content
 								.custom-checkbox-wrap
 									label.custom-checkbox
-										input.custom-checkbox__inp(type="checkbox", name="")
+										input.custom-checkbox__inp.js-show-if-checked(data-target="#bottom_rent_btn" type="checkbox", name="")
 										.custom-checkbox__square
 										.custom-checkbox__text Аренда
 								.custom-checkbox-wrap
 									label.custom-checkbox
-										input.custom-checkbox__inp(type="checkbox", name="")
+										input.custom-checkbox__inp.js-show-if-checked(data-target="#bottom_buy" type="checkbox", name="")
 										.custom-checkbox__square
 										.custom-checkbox__text Продажа
 								.custom-checkbox-wrap
 									label.custom-checkbox
-										input.custom-checkbox__inp(type="checkbox", name="")
+										input.custom-checkbox__inp.js-show-if-checked(data-target="#bottom_collective_buy" type="checkbox", name="")
 										.custom-checkbox__square
 										.custom-checkbox__text Продажа (коллективное инвестирование)
 						.catalog-col__item
@@ -174,7 +184,7 @@ block main
 									.ion-rs-double-inputs
 										input#irs-double-1-from.ion-rs-double-input.ion-rs-double-input--from(type="text")
 										input#irs-double-1-to.ion-rs-double-input.ion-rs-double-input--to(type="text")
-									
+
 						.catalog-col__item
 							.catalog-col__item-title.catalog-col__item-title--clr Стоимость, ₽
 							.catalog-col__item-content.catalog-col__item-content--mt
@@ -183,18 +193,18 @@ block main
 									.ion-rs-double-inputs
 										input#irs-double-2-from.ion-rs-double-input.ion-rs-double-input--from(type="text")
 										input#irs-double-2-to.ion-rs-double-input.ion-rs-double-input--to(type="text")
-				
-
-				
 
 
-				
 
-					
+
+
+
+
+
 			.list-objects
 				h4.list-objects__title Список объектов
 				table.list-objects__table
-					tbody 
+					tbody
 						tr.list-objects__table-row.list-objects__table-row--heading
 							td.list-objects__table-col.list-objects__table-col--code
 							td.list-objects__table-col.list-objects__table-col--object Объект
@@ -206,7 +216,7 @@ block main
 							td.list-objects__table-col.list-objects__table-col--area Площадь
 							td.list-objects__table-col.list-objects__table-col--price Стоимость
 						tr.list-objects__table-row
-							td.list-objects__table-col.list-objects__table-col--code 
+							td.list-objects__table-col.list-objects__table-col--code
 								.table-text 94
 							td.list-objects__table-col.list-objects__table-col--object
 								img.table-image(src="images/objects-table/object-img.jpg", alt="")
@@ -231,12 +241,12 @@ block main
 							td.list-objects__table-col.list-objects__table-col--price
 								.cost
 									.cost__rent Аренда 2500 руб. кв/м
-									.cost__month Месяц за 250 000 ₽ 
-							
-							
-							
+									.cost__month Месяц за 250 000 ₽
+
+
+
 						tr.list-objects__table-row
-							td.list-objects__table-col.list-objects__table-col--code 
+							td.list-objects__table-col.list-objects__table-col--code
 								.table-text 148
 							td.list-objects__table-col.list-objects__table-col--object
 								img.table-image(src="images/objects-table/object-img.jpg", alt="")
@@ -269,7 +279,7 @@ block main
 
 
 						tr.list-objects__table-row
-							td.list-objects__table-col.list-objects__table-col--code 
+							td.list-objects__table-col.list-objects__table-col--code
 								.table-text 94
 							td.list-objects__table-col.list-objects__table-col--object
 								img.table-image(src="images/objects-table/object-img.jpg", alt="")
@@ -294,12 +304,12 @@ block main
 							td.list-objects__table-col.list-objects__table-col--price
 								.cost
 									.cost__rent Аренда 2500 руб. кв/м
-									.cost__month Месяц за 250 000 ₽ 
-							
-							
-							
+									.cost__month Месяц за 250 000 ₽
+
+
+
 						tr.list-objects__table-row
-							td.list-objects__table-col.list-objects__table-col--code 
+							td.list-objects__table-col.list-objects__table-col--code
 								.table-text 148
 							td.list-objects__table-col.list-objects__table-col--object
 								img.table-image(src="images/objects-table/object-img.jpg", alt="")
@@ -330,3 +340,9 @@ block main
 
 
 
+				.catalog-info
+					h2.section-title.catalog-info__title Мы поможем вам выбрать&nbsp;объект
+					.catalog-info__buttons-row
+						a.button.button--blue.catalog-info__button#bottom_rent_btn(href="")  Арендовать объект
+						a.button.button--blue.catalog-info__button#bottom_buy(href="")  Приобрести объект
+						a.button.button--blue.catalog-info__button#bottom_collective_buy(href="")  Приобрести объект с инвестициями

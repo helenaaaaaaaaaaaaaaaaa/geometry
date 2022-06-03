@@ -12,7 +12,7 @@ block vars
 block main
 	section.promo
 		.container
-			
+
 			.promo__inner
 
 				.promo-left
@@ -26,7 +26,7 @@ block main
 						.calc-invest
 							.calc-invest__name Сумма вложений
 							.calc-invest__val#range-slider-1-target 1 000 000 ₽
-							
+
 							.calc-invest__range-slider
 								input.js-range-slider-1(type="text" data-min="1000" data-max="10000000" data-step="1000" data-from="1000000" data-target="range-slider-1-target" data-percent="range-slider-1-percent" data-target-price="range-slider-1-target-price")
 						.calc-month
@@ -39,7 +39,13 @@ block main
 
 
 		.promo__back
-			img.promo__back-img(src="images/main/promo-bac.jpg", alt="")
+			.promo-back-slider.js-promo-back-slider
+				.promo-back-slide
+					img.promo__back-img(src="images/main/promo-bac.jpg", alt="")
+				.promo-back-slide
+					img.promo__back-img(src="images/main/answer-bac.jpg", alt="")
+				.promo-back-slide
+					img.promo__back-img(src="images/main/about-back.jpg", alt="")
 
 	include sections/clients-types.pug
 
@@ -66,7 +72,7 @@ block main
 		.answer-box__back
 			img.answer-box__back-img(src="images/main/answer-bac.jpg", alt="")
 		.container
-			form.answer-form.js-answer-form--validation(action="") 
+			form.answer-form.js-answer-form--validation(action="")
 				h2.section-title.answer-form__title ПОЛУЧИТЕ ОТВЕТ ЭКСПЕРТА УЖЕ СЕГОДНЯ
 				.answer-form-wrap
 					.form-field.answer-form__field.answer-form__field--task
@@ -76,14 +82,14 @@ block main
 					.form-field.answer-form__field.answer-form__field--phone
 						input.form-field__input.js-tel-input(placeholder="+7 (999) 999-99-99", type="tel", name="yourphone")
 					button.answer-form__button.button.button--blue(type="submit") Отправить
-					
+
 				.answer-form__required Заполните все поля.
-				.answer-form__confid  
-					.answer-form__confid-text Нажимая на кнопку «Отправить» вы соглашаетесь с 
+				.answer-form__confid
+					.answer-form__confid-text Нажимая на кнопку «Отправить» вы соглашаетесь с
 						a.answer-form__confid-link(href="")  политикой конфиденциальности
 				.answer-form__connect
 					.answer-form__connect-text напишите нам в удобном для вас мессенджере
-					ul.social 
+					ul.social
 						li.social__item.social__item--green
 							a.social__item-link
 								img(src="images/header/bot/social/whatsapp.svg", alt="")
@@ -91,9 +97,9 @@ block main
 							a.social__item-link
 								img(src="images/header/bot/social/telegram.svg", alt="")
 						li.social__item.social__item--viol
-							a.social__item-link 
+							a.social__item-link
 								img(src="images/header/bot/social/viber.svg", alt="")
-				
+
 
 	section.partners
 		.container

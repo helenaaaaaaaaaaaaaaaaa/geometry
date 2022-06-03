@@ -107,7 +107,7 @@ body {
 	&.compensate-for-scrollbar {
 		overflow: hidden;
 	}
-	
+
 }
 .body-fixed {
 	overflow: hidden;
@@ -133,6 +133,7 @@ html {
 	justify-content: center;
 	align-items: center;
 	transition-duration: .3s;
+	text-align: center;
 
 	&:hover {
 		background: #306FC7;
@@ -339,7 +340,18 @@ html {
 	}
 }
 
+.select2-container--custom-theme{
+	transition: opacity .3s;
+	&.select2-container--open{
+		opacity: 1;
+	}
+}
 
+.simple-select--placeholder-selected{
+	&+.select2-container--custom-theme{
+		opacity: .6;
+	}
+}
 
 .simple-select-items-wrapper {
 	opacity: 0;
@@ -449,10 +461,16 @@ html {
 	background: #306FC7;
 	border-radius: 3px;
     left: 5px;
-    right: 2px; 
+    right: 2px;
 }
 
-.chb-with-filters {}
+.chb-with-filters {
+	opacity: .6;
+	transition: opacity .3s;
+	&--checked{
+		opacity: 1;
+	}
+}
 
 .chbwf-main {
 	border: 1px solid #306FC7;
@@ -514,8 +532,9 @@ html {
 		display: flex;
 		align-items: center;
 		margin-left: 7px;
+		margin-bottom: 7px;
 		cursor: pointer;
-		
+
 
 		&__name {
 			font-weight: 400;
@@ -534,4 +553,8 @@ html {
 			margin-left: 3px;
 		}
 	}
+}
+
+.button--hidden{
+	display: none !important;
 }

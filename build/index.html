@@ -80,7 +80,13 @@
             </div>
           </div>
         </div>
-        <div class="promo__back"><img class="promo__back-img" src="images/main/promo-bac.jpg" alt=""></div>
+        <div class="promo__back">
+          <div class="promo-back-slider js-promo-back-slider">
+            <div class="promo-back-slide"><img class="promo__back-img" src="images/main/promo-bac.jpg" alt=""></div>
+            <div class="promo-back-slide"><img class="promo__back-img" src="images/main/answer-bac.jpg" alt=""></div>
+            <div class="promo-back-slide"><img class="promo__back-img" src="images/main/about-back.jpg" alt=""></div>
+          </div>
+        </div>
       </section>
       <section class="clients-types">
         <div class="clients-type">
@@ -136,7 +142,7 @@
       <section class="answer-box" id="ex1">
         <div class="answer-box__back"><img class="answer-box__back-img" src="images/main/answer-bac.jpg" alt=""></div>
         <div class="container">
-          <form class="answer-form js-answer-form--validation" action=""> 
+          <form class="answer-form js-answer-form--validation" action="">
             <h2 class="section-title answer-form__title">ПОЛУЧИТЕ ОТВЕТ ЭКСПЕРТА УЖЕ СЕГОДНЯ</h2>
             <div class="answer-form-wrap">
               <div class="form-field answer-form__field answer-form__field--task">
@@ -151,15 +157,15 @@
               <button class="answer-form__button button button--blue" type="submit">Отправить</button>
             </div>
             <div class="answer-form__required">Заполните все поля.</div>
-            <div class="answer-form__confid"> 
-              <div class="answer-form__confid-text">Нажимая на кнопку «Отправить» вы соглашаетесь с <a class="answer-form__confid-link" href=""> политикой конфиденциальности</a></div>
+            <div class="answer-form__confid">
+              <div class="answer-form__confid-text">Нажимая на кнопку «Отправить» вы соглашаетесь с<a class="answer-form__confid-link" href=""> политикой конфиденциальности</a></div>
             </div>
             <div class="answer-form__connect">
               <div class="answer-form__connect-text">напишите нам в удобном для вас мессенджере</div>
-              <ul class="social"> 
+              <ul class="social">
                 <li class="social__item social__item--green"><a class="social__item-link"><img src="images/header/bot/social/whatsapp.svg" alt=""></a></li>
                 <li class="social__item social__item--blue"><a class="social__item-link"><img src="images/header/bot/social/telegram.svg" alt=""></a></li>
-                <li class="social__item social__item--viol"><a class="social__item-link"> <img src="images/header/bot/social/viber.svg" alt=""></a></li>
+                <li class="social__item social__item--viol"><a class="social__item-link"><img src="images/header/bot/social/viber.svg" alt=""></a></li>
               </ul>
             </div>
           </form>
@@ -230,6 +236,968 @@
         </div>
       </div>
     </footer>
+    <div class="modals-wrap">
+      <div class="popup-run oldsite-popup" id="order-popup-buy">
+        <div class="popup-container">
+          <div class="form-container">
+            <div class="container">
+              <div class="form">
+                <form action="sendEmailQ.php" method="post" enctype="multipart/form-data">
+                  <div class="name">Подберем Объект для инвестиций</div>
+                  <input name="nameForm" type="hidden" value="Подберем Объект для инвестиций">
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваш город</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 10px;">С-Пб</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="SelectCity" value="1" data-region-name="Ленинградская область" data-city-name="Санкт-Петербург">
+                            <input type="radio" name="SelectCity" value="" checked="">
+                            <input id="yes2" type="radio" name="SelectCity" value="3" data-region-name="Московская область" data-city-name="Москва">
+                            <input type="text" required="" style="width:0px; height:0px" value="">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Москва</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваше Имя</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="FIO" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Бюджет</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input required="" name="DebetMin" type="text" placeholder="От" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <input required="" name="DebetMax" type="text" placeholder="До" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Номер телефона</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input class="js-tel-input" required="" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Электронная почта</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="email" type="email" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Предполагаемый метраж</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input name="SquareMin" type="text" placeholder="От" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <input name="SquareMax" type="text" placeholder="До" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Готовы к коллективному инвестированию</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 30px;">Да</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="CollectiveInvestment" value="1">
+                            <input type="radio" name="CollectiveInvestment" value="2" checked="">
+                            <input id="yes2" type="radio" name="CollectiveInvestment" value="3">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Нет</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Доп информация</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="description" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text buttons">
+                    <div class="InsuraceOrder btn" onclick="ClickInsuranceRisk(this);">Как это работает
+                      <div class="psevdo-table__tip psevdo-table__tip--lenta" style="display: none;">
+                        <div class="psevdo-tip__wrapper">
+                          <div class="psevdo-tip__txt">
+                            <div class="psevdo-tip__title psevdo-tip__title--bright">Как это работает</div>
+                            <div class="psevdo-tip__text">
+                              <p>
+                                Мы подберем ликвидный объект, оценим рыночную арендную ставку,
+                                проверим чистоту сделки, если необходимо разделим объект с
+                                полным циклом согласований, подберем сетевых арендаторов.
+                              </p><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="psevdo-tip__close"></div>
+                      </div>
+                    </div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                  </div>
+                  <div class="checkbox-block">
+                    <input id="rules1" type="checkbox" checked required="">
+                    <label for="rules1">Я даю свое согласие на обработку персональных данных.</label>
+                  </div>
+                  <div class="buttons">
+                    <div class="btn" onclick="$(this).siblings('input[type=submit]').click();">Отправить</div>
+                    <input type="submit" style="display:none;">
+                    <div class="file-select">
+                      <input type="file" name="attachment">
+                    </div>
+                  </div>
+                </form>
+                <div class="aswerMsg" style="display:none">
+                  <div class="buttons">
+                    <div class="btn blue" onclick="$(this).parent().parent().hide().empty();">Прекрасно</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-run oldsite-popup" id="order-popup-sell">
+        <div class="popup-container">
+          <div class="form-container">
+            <div class="container">
+              <div class="form">
+                <form action="sendEmailQ.php" method="post">
+                  <div class="name" style="width:450px;">ОЦЕНИМ ВАШ ОБЪЕКТ</div>
+                  <input name="nameForm" type="hidden" value="Оценим Ваш Объект">
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваш город</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 10px;">С-Пб</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="SelectCity" value="1" data-region-name="Ленинградская область" data-city-name="Санкт-Петербург">
+                            <input type="radio" name="SelectCity" value="" checked="">
+                            <input id="yes2" type="radio" name="SelectCity" value="3" data-region-name="Московская область" data-city-name="Москва">
+                            <input type="text" required="" style="width:0px; height:0px" value="">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Москва</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваше Имя</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="FIO" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Адрес</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="Adres" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Площадь</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="Area" type="text" placeholder="" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Арендный поток в месяц</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="debetInMounth" type="text" placeholder="" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Наименование арендатора</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="BrendTenant" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Электрическая мощность</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="electricPower" type="text" placeholder="" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Номер телефона</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input class="js-tel-input" required="" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Электронная почта</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="email" type="email" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Доп информация</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="description" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text buttons">
+                    <div class="InsuraceOrder btn" onclick="ClickInsuranceRisk(this);">Как это работает
+                      <div class="psevdo-table__tip psevdo-table__tip--lenta" style="display: none;">
+                        <div class="psevdo-tip__wrapper">
+                          <div class="psevdo-tip__txt">
+                            <div class="psevdo-tip__title psevdo-tip__title--bright">Как это работает</div>
+                            <div class="psevdo-tip__text">
+                              <p>
+                                Наша компания профессионально оценит ваш
+                                объект, проведем экспертную стоимость аренды, рассмотрим ваш объект в покупку,
+                                предложим ваш объект клиентам для коллективного инвестирования, клиентам из нашей
+                                базы, по согласованию с продавцом разместим рекламу на самых продвинутых сайтах.
+                              </p><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="psevdo-tip__close"></div>
+                      </div>
+                    </div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                  </div>
+                  <div class="checkbox-block">
+                    <input id="rules3" type="checkbox" checked required="">
+                    <label for="rules3">Я даю свое согласие на обработку персональных данных.</label>
+                  </div>
+                  <div class="buttons">
+                    <div class="btn" onclick="$(this).siblings('input[type=submit]').click();">Отправить</div>
+                    <input type="submit" style="display:none;">
+                    <div class="file-select">
+                      <input type="file" name="attachment">
+                    </div>
+                  </div>
+                </form>
+                <div class="aswerMsg" style="display:none">
+                  <div class="buttons">
+                    <div class="btn blue" onclick="$(this).parent().parent().hide().empty();">Прекрасно</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-run oldsite-popup" id="order-popup-leaseObject">
+        <div class="popup-container">
+          <div class="form-container">
+            <div class="container">
+              <div class="form">
+                <form action="sendEmailQ.php" method="post" enctype="multipart/form-data">
+                  <div class="name">Мы найдем для вас сетевого арендатора</div>
+                  <input name="nameForm" type="hidden" value="Мы найдем для вас сетевого арендатора">
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваш город</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 10px;">С-Пб</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="SelectCity" value="1" data-region-name="Ленинградская область" data-city-name="Санкт-Петербург">
+                            <input type="radio" name="SelectCity" value="" checked="">
+                            <input id="yes2" type="radio" name="SelectCity" value="3" data-region-name="Московская область" data-city-name="Москва">
+                            <input type="text" required="" style="width:0px; height:0px" value="">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Москва</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваше Имя</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="FIO" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Адрес</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="Adres" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Площадь кв.м.</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input class="inputBoxrr" id="Area" required="" name="Area" type="text" placeholder="" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Аренда в месяц, руб.</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input class="inputBoxrr" id="debetInMounth" required="" name="debetInMounth" type="text" placeholder="" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text"></div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input id="debetKvM" required="" name="debetKvM" type="text" placeholder="" readonly="" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <div class="text">руб./кв.м.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Электрическая мощность</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="electricPower" type="text" placeholder="" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Номер телефона</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input class="js-tel-input" required="" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Электронная почта</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="email" type="email" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Доп информация</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="description" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text buttons">
+                    <div class="InsuraceOrder btn" onclick="ClickInsuranceRisk(this);">Как это работает
+                      <div class="psevdo-table__tip psevdo-table__tip--lenta" style="display: none;">
+                        <div class="psevdo-tip__wrapper">
+                          <div class="psevdo-tip__txt">
+                            <div class="psevdo-tip__title psevdo-tip__title--bright">Как это работает</div>
+                            <div class="psevdo-tip__text">
+                              <p>
+                                Мы профессионально изучим локацию объекта на предмет конкурентов, плотности
+                                населения, предложим сетевым компаниям, во время получим от них обратную связь,
+                                по соглашению разместим рекламу на самых продвинутых сайтах.
+                              </p><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="psevdo-tip__close"></div>
+                      </div>
+                    </div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                  </div>
+                  <div class="checkbox-block">
+                    <input id="rules4" type="checkbox" checked required="">
+                    <label for="rules4">Я даю свое согласие на обработку персональных данных.</label>
+                  </div>
+                  <div class="buttons">
+                    <div class="btn" onclick="$(this).siblings('input[type=submit]').click();">Отправить</div>
+                    <input type="submit" style="display:none;">
+                    <div class="file-select">
+                      <input type="file" name="attachment">
+                    </div>
+                  </div>
+                </form>
+                <div class="aswerMsg" style="display:none">
+                  <div class="buttons">
+                    <div class="btn blue" onclick="$(this).parent().parent().hide().empty();">Прекрасно</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-run oldsite-popup" id="order-popup-rentObject">
+        <div class="popup-container">
+          <div class="form-container">
+            <div class="container">
+              <div class="form">
+                <form action="sendEmailQ.php" method="post">
+                  <div class="name">Мы найдем для вас Объект по вашим параметрам</div>
+                  <input name="nameForm" type="hidden" value="Мы найдем для вас Объект по вашим параметрам">
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваш город</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 10px;">С-Пб</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="SelectCity" value="1" data-region-name="Ленинградская область" data-city-name="Санкт-Петербург">
+                            <input type="radio" name="SelectCity" value="" checked="">
+                            <input id="yes2" type="radio" name="SelectCity" value="3" data-region-name="Московская область" data-city-name="Москва">
+                            <input type="text" required="" style="width:0px; height:0px" value="">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Москва</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваше Имя</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="FIO" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Ваша Фамилия</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="LastName" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Наименование брэнда</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="BrendTenant" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Вид деятельности</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="typeActivity" type="text" placeholder="" list="typeAct">
+                          <datalist id="typeAct">
+                            <option></option>
+                          </datalist>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Рассматриваемый метраж</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input required="" name="SpaceAreaMin" type="text" placeholder="От" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <input required="" name="SpaceAreaMax" type="text" placeholder="До" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Бюджет в месяц</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input required="" name="DebetInMounthMin" type="text" placeholder="От" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <input required="" name="DebetInMounthMax" type="text" placeholder="До" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Бюджет за кв.м</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input name="DebetMeterMin" type="text" placeholder="От" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <input name="DebetMeterMax" type="text" placeholder="До" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Номер телефона</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input class="js-tel-input" required="" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Электронная почта</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="email" type="email" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Доп информация</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <textarea rows="8" style="width:100%; resize: none;" name="description"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text buttons">
+                    <div class="InsuraceOrder btn" onclick="ClickInsuranceRisk(this);">Как это работает
+                      <div class="psevdo-table__tip psevdo-table__tip--lenta" style="display: none;">
+                        <div class="psevdo-tip__wrapper">
+                          <div class="psevdo-tip__txt">
+                            <div class="psevdo-tip__title psevdo-tip__title--bright">Как это работает</div>
+                            <div class="psevdo-tip__text">
+                              <p>
+                                Мы предложим в аренду объекты из нашей базы, либо купим под ваш
+                                бизнес объект с торгов. Проанализируем локацию на конкурентов и
+                                на плотность населения.
+                              </p>
+                              <div style="color: red;">Мы всегда работаем без комиссии!!!</div>
+                              <p></p><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="psevdo-tip__close"></div>
+                      </div>
+                    </div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                  </div>
+                  <div class="checkbox-block">
+                    <input id="rules5" type="checkbox" checked required="">
+                    <label for="rules5">Я даю свое согласие на обработку персональных данных.</label>
+                  </div>
+                  <div class="buttons">
+                    <div class="btn" onclick="$(this).siblings('input[type=submit]').click();">Отправить</div>
+                    <input type="submit" style="display:none;">
+                    <div class="file-select">
+                      <input type="file" name="attachment">
+                    </div>
+                  </div>
+                </form>
+                <div class="aswerMsg" style="display:none">
+                  <div class="buttons">
+                    <div class="btn blue" onclick="$(this).parent().parent().hide().empty();">Прекрасно</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup-run oldsite-popup" id="order-popup-program">
+        <div class="popup-container">
+          <div class="form-container">
+            <div class="container">
+              <div class="form">
+                <form action="sendEmailQ.php" method="post" enctype="multipart/form-data">
+                  <div class="name">Разработаем адресную программу для вашего бизнеса</div>
+                  <input name="nameForm" type="hidden" value="Разработаем адресную программу для вашего бизнеса">
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваш город</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 10px;">С-Пб</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="SelectCity" value="1" data-region-name="Ленинградская область" data-city-name="Санкт-Петербург">
+                            <input type="radio" name="SelectCity" value="" checked="">
+                            <input id="yes2" type="radio" name="SelectCity" value="3" data-region-name="Московская область" data-city-name="Москва">
+                            <input type="text" required="" style="width:0px; height:0px" value="">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Москва</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input full">
+                    <div class="input-block requred">
+                      <input name="BrendName" required="" type="text" placeholder="Наименование бренда">
+                    </div>
+                    <div class="input-block">
+                      <input name="typeActivity" type="text" placeholder="Вид деятельности ">
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Есть ли развитие на 2021/2022г.</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 30px;">Да</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="DevelopmentFor2020" value="1">
+                            <input type="radio" name="DevelopmentFor2020" value="2" checked="">
+                            <input id="yes2" type="radio" name="DevelopmentFor2020" value="3">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Нет</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Рассматриваемый метраж, кв.м.</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input required="" name="SpaceAreaMin" type="text" placeholder="От" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <input required="" name="SpaceAreaMax" type="text" placeholder="До" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Планируемый бюджет за Объект в месяц, (тыс., руб.)</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input required="" name="DebetInMounthMin" type="text" placeholder="От" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <input required="" name="DebetInMounthMax" type="text" placeholder="До" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Планируемый бюджет за кв.м., (руб. кв.м./в мес.)</div>
+                    <div class="choice">
+                      <div class="flexed-input">
+                        <div class="input-block">
+                          <input name="PayForTheAreaSpaceMin" type="text" placeholder="От" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                        <div class="input-block">
+                          <input name="PayForTheAreaSpaceMax" type="text" placeholder="До" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">План открытия новых точек, (количество точек на 2021/2022г.)</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="PlanForOpeningNewPointsCount" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Есть Адресная программа развития</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 30px;">Да</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="HaveTargetedDevelopmentProgram" value="1">
+                            <input type="radio" name="HaveTargetedDevelopmentProgram" value="2" checked="">
+                            <input id="yes2" type="radio" name="HaveTargetedDevelopmentProgram" value="3">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Нет</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Развиваетесь в области</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 30px;">Да</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="PlanningDevelopmentInAreas" value="1">
+                            <input type="radio" name="PlanningDevelopmentInAreas" value="2" checked="">
+                            <input id="yes2" type="radio" name="PlanningDevelopmentInAreas" value="3">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Нет</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Развиваетесь в регионах</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 30px;">Да</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="PlanningDevelopmentInRegion" value="1">
+                            <input type="radio" name="PlanningDevelopmentInRegion" value="2" checked="">
+                            <input id="yes2" type="radio" name="PlanningDevelopmentInRegion" value="3">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Нет</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Рассматриваете покупку Объекта</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 30px;">Да</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="WantsByObject" value="1">
+                            <input type="radio" name="WantsByObject" value="2" checked="">
+                            <input id="yes2" type="radio" name="WantsByObject" value="3">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Нет</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Количество Менеджеров развития по районам</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="CountManagersByArea" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div><br>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваше Имя</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="FIO" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Ваша Фамилия</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="LastName" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Номер телефона</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input class="js-tel-input" required="" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Телефон офиса</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="phoneOffice" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Доп информация</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="description" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text buttons">
+                    <div class="InsuraceOrder btn" onclick="ClickInsuranceRisk(this);">Как это работает
+                      <div class="psevdo-table__tip psevdo-table__tip--lenta" style="display: none;">
+                        <div class="psevdo-tip__wrapper">
+                          <div class="psevdo-tip__txt">
+                            <div class="psevdo-tip__title psevdo-tip__title--bright">Как это работает</div>
+                            <div class="psevdo-tip__text">
+                              <p>
+                                Наш внутренний сайт подберет районы с большой плотностью
+                                населения и с минимальной конкурентной средой, мы индивидуально работаем с
+                                активными сетевыми компаниями
+                              </p><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="psevdo-tip__close"></div>
+                      </div>
+                    </div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                  </div>
+                  <div class="checkbox-block">
+                    <input id="rules6" type="checkbox" checked required="">
+                    <label for="rules6">Я даю свое согласие на обработку персональных данных.</label>
+                  </div>
+                  <div class="buttons">
+                    <div class="btn" onclick="$(this).siblings('input[type=submit]').click();">Отправить</div>
+                    <input type="submit" style="display:none;">
+                    <div class="file-select">
+                      <input type="file" name="attachment">
+                    </div>
+                  </div>
+                </form>
+                <div class="aswerMsg" style="display:none">
+                  <div class="buttons">
+                    <div class="btn blue" onclick="$(this).parent().parent().hide().empty();">Прекрасно</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=ru-RU"></script>
     <script src="js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </body>
 </html>

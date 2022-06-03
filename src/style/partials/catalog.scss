@@ -1,69 +1,76 @@
-.catalog{
+.catalog {
 	margin-top: 80px;
-	&-inner{
+
+	&-inner {
 		margin-top: 44px;
 		background: #F5F5F5;
-		
+
 		padding-top: 36px;
 		padding-right: 35px;
 		padding-left: 35px;
 		padding-bottom: 39px;
 
 	}
-	&-row{
+
+	&-row {
 
 		display: flex;
 		margin-left: -40px;
 		width: 1050px;
 		max-width: 100%;
 	}
-	&-col{
+
+	&-col {
 		width: calc(26% - 40px);
 		margin-left: 40px;
 
-		&--small{			
+		&--small {
 			width: calc(22% - 40px);
 		}
-		
-		&__item{
-			&:not(:first-child){
+
+		&__item {
+			&:not(:first-child) {
 				margin-top: 16px;
 			}
-			&-title{
+
+			&-title {
 				font-weight: 400;
 				font-size: 16px;
 				line-height: 145%;
 				color: #292929;
-				&--clr{
+
+				&--clr {
 					color: #000000;
 				}
 			}
-			&-content{
+
+			&-content {
 				margin-top: 8px;
-				&--mt{
+
+				&--mt {
 					margin-top: 15px;
 				}
 			}
 		}
-		
+
 	}
 }
 
 
-@media screen and (min-width:1250px){
+@media screen and (min-width:1250px) {
 
 	.list-objects {
 		padding-top: 80px;
 		padding-bottom: 163px;
-	
+
 		&__title {
 			font-weight: 400;
 			font-size: 30px;
 			line-height: 110%;
 			color: #292929;
-	
+
 		}
-	
+
 		&__table {
 			margin-top: 25px;
 			width: 100%;
@@ -71,77 +78,77 @@
 			font-size: 14px;
 			border-spacing: 0;
 			border-collapse: collapse;
-	
+
 			&-row {}
-	
+
 			&-col {
 				padding-left: 28px;
 				padding-bottom: 15px;
 				padding-top: 13px;
 				border-bottom: 1px solid #D7D7D7;
 				vertical-align: top;
-	
+
 				&--code {
 					width: 23px;
 					padding-left: 0;
 				}
-	
+
 				&--object {
 					width: 183px;
 					padding-left: 22px;
 				}
-	
+
 				&--address {
 					width: 206px;
 				}
-	
+
 				&--metro {
 					width: 150px;
 					padding-left: 21px;
 				}
-	
+
 				&--obj-type {
 					padding-left: 25px;
 					width: 110px;
 				}
-	
+
 				&--deal-type {
 					padding-left: 23px;
 					width: 131px;
 				}
-	
+
 				&--floor {
 					width: 65px;
 				}
-	
+
 				&--area {
 					width: 107px;
 				}
-	
+
 				&--price {
 					padding-left: 15px;
 					width: 173px;
 				}
-	
-	
+
+
 			}
-	
-	
+
+
 		}
 	}
-	
+
 	.table-image {
 		width: 100%;
 		height: auto;
 	}
-	
+
 	.table-geos {
 		margin-top: 30px;
 	}
-	
+
 }
 
-	
+
 .table-geo {
 	display: flex;
 	align-items: center;
@@ -170,7 +177,9 @@
 }
 
 .cost {
-	&__rent, &__month {
+
+	&__rent,
+	&__month {
 		padding: 3px 4px 4px 4px;
 	}
 
@@ -194,5 +203,38 @@
 	&__link {
 		border-bottom: 1px dashed #2E358D;
 		cursor: pointer;
+	}
+}
+
+
+
+.catalog-info {
+	margin-top: 50px;
+	&__title {
+		text-align: center;
+	}
+
+	&__buttons-row {
+		display: flex;
+		justify-content: center;
+		margin-left: -15px;
+		margin-bottom: -15px;
+		margin-top: 30px;
+		flex-wrap: wrap;
+	}
+
+	&__button {
+		margin-left: 15px;
+		margin-bottom: 15px;
+		@media screen and (max-width: 890px) {
+			flex-grow: 1;
+		}
+		&--blue {}
+
+		&:hover {}
+
+		&:active {}
+
+		&:focus {}
 	}
 }

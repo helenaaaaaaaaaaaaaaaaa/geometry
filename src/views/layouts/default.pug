@@ -23,7 +23,7 @@ html(lang="ru")
 			let vh = window.innerHeight * 0.01;
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 			});
-			
+
 			//!!!Изменить при натяжке
 			const homepageLink='/geometry/build/';
 		//title= `${page.title}`
@@ -39,8 +39,11 @@ html(lang="ru")
 			include ../partials/_footer
 
 		block modals
+			include ../partials/_modals
 
 
+		script(src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU")
 		script(src="js/main.js")
+		script(src="https://www.google.com/recaptcha/api.js" async defer)
 
 		block scripts

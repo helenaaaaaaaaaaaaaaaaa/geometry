@@ -1,0 +1,681 @@
+.modals-wrap
+	#order-popup-buy.popup-run.oldsite-popup
+		.popup-container
+			.form-container
+				.container
+					.form
+						form(action='sendEmailQ.php' method='post' enctype='multipart/form-data')
+							.name Подберем Объект для инвестиций
+							input(name='nameForm' type='hidden' value='Подберем Объект для инвестиций')
+							.flexed-input-text.requred
+								.text
+									| Ваш город
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 10px;') С-Пб
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='SelectCity' value='1' data-region-name="Ленинградская область" data-city-name="Санкт-Петербург")
+												input(type='radio' name='SelectCity' value='' checked='')
+												input#yes2(type='radio' name='SelectCity' value='3' data-region-name="Московская область" data-city-name="Москва")
+												input(type='text' required='' style='width:0px; height:0px' value='')
+												.switch
+										label Москва
+							.flexed-input-text.requred
+								.text
+									| Ваше Имя
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='FIO' type='text' placeholder='')
+							.flexed-input-text.requred
+								.text
+									| Бюджет
+								.choice
+									.flexed-input
+										.input-block
+											input(required='' name='DebetMin' type='text' placeholder='От' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											input(required='' name='DebetMax' type='text' placeholder='До' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+									| Номер телефона
+								.choice
+									.flexed-input.full
+										.input-block
+											input.js-tel-input(required='' name='phone' type='text'  placeholder='+7 (___) ___-__-__')
+							.flexed-input-text
+								.text
+									| Электронная почта
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='email' type='email' placeholder='')
+							.flexed-input-text
+								.text
+									| Предполагаемый метраж
+								.choice
+									.flexed-input
+										.input-block
+											input(name='SquareMin' type='text' placeholder='От' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											input(name='SquareMax' type='text' placeholder='До' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text
+								.text
+									| Готовы к коллективному инвестированию
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 30px;') Да
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='CollectiveInvestment' value='1')
+												input(type='radio' name='CollectiveInvestment' value='2' checked='')
+												input#yes2(type='radio' name='CollectiveInvestment' value='3')
+												.switch
+										label Нет
+							.flexed-input-text
+								.text
+									| Доп информация
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='description' type='text' placeholder='')
+							.flexed-input-text.buttons
+								.InsuraceOrder.btn(onclick='ClickInsuranceRisk(this);')
+									| Как это работает
+									.psevdo-table__tip.psevdo-table__tip--lenta(style='display: none;')
+										.psevdo-tip__wrapper
+											.psevdo-tip__txt
+												.psevdo-tip__title.psevdo-tip__title--bright
+													| Как это работает
+												.psevdo-tip__text
+													p
+														| Мы подберем ликвидный объект, оценим рыночную арендную ставку,
+														| проверим чистоту сделки, если необходимо разделим объект с
+														| полным циклом согласований, подберем сетевых арендаторов.
+													br
+										.psevdo-tip__close
+								.choice
+									.flexed-input.full
+										.input-block
+							.flexed-input-text.requred
+								.g-recaptcha(data-sitekey="your_site_key")
+							.checkbox-block
+								input#rules1(type='checkbox' checked required='')
+								label(for='rules1') Я даю свое согласие на обработку персональных данных.
+							.buttons
+								.btn(onclick="$(this).siblings('input[type=submit]').click();") Отправить
+								input(type='submit' style='display:none;')
+								.file-select
+									input(type='file' name='attachment')
+						.aswerMsg(style='display:none')
+							.buttons
+								.btn.blue(onclick='$(this).parent().parent().hide().empty();') Прекрасно
+	#order-popup-sell.popup-run.oldsite-popup
+		.popup-container
+			.form-container
+				.container
+					.form
+						form(action='sendEmailQ.php' method='post')
+							.name(style='width:450px;') ОЦЕНИМ ВАШ ОБЪЕКТ
+							input(name='nameForm' type='hidden' value='Оценим Ваш Объект')
+							.flexed-input-text.requred
+								.text
+									| Ваш город
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 10px;') С-Пб
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='SelectCity' value='1' data-region-name="Ленинградская область" data-city-name="Санкт-Петербург")
+												input(type='radio' name='SelectCity' value='' checked='')
+												input#yes2(type='radio' name='SelectCity' value='3' data-region-name="Московская область" data-city-name="Москва")
+												input(type='text' required='' style='width:0px; height:0px' value='')
+												.switch
+										label Москва
+							.flexed-input-text.requred
+								.text
+									| Ваше Имя
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='FIO' type='text' placeholder='')
+							.flexed-input-text.requred
+								.text
+									| Адрес
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='Adres' type='text' placeholder='')
+							.flexed-input-text.requred
+								.text
+									| Площадь
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='Area' type='text' placeholder='' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text
+								.text
+									| Арендный поток в месяц
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='debetInMounth' type='text' placeholder='' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text
+								.text
+									| Наименование арендатора
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='BrendTenant' type='text' placeholder='')
+							.flexed-input-text
+								.text
+									| Электрическая мощность
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='electricPower' type='text' placeholder='' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+									| Номер телефона
+								.choice
+									.flexed-input.full
+										.input-block
+											input.js-tel-input(required='' name='phone' type='text'  placeholder='+7 (___) ___-__-__')
+							.flexed-input-text
+								.text
+									| Электронная почта
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='email' type='email' placeholder='')
+							.flexed-input-text
+								.text
+									| Доп информация
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='description' type='text' placeholder='')
+							.flexed-input-text.buttons
+								.InsuraceOrder.btn(onclick='ClickInsuranceRisk(this);')
+									| Как это работает
+									.psevdo-table__tip.psevdo-table__tip--lenta(style='display: none;')
+										.psevdo-tip__wrapper
+											.psevdo-tip__txt
+												.psevdo-tip__title.psevdo-tip__title--bright
+													| Как это работает
+												.psevdo-tip__text
+													p
+														| Наша компания профессионально оценит ваш
+														| объект, проведем экспертную стоимость аренды, рассмотрим ваш объект в покупку,
+														| предложим ваш объект клиентам для коллективного инвестирования, клиентам из нашей
+														| базы, по согласованию с продавцом разместим рекламу на самых продвинутых сайтах.
+													br
+										.psevdo-tip__close
+								.choice
+									.flexed-input.full
+										.input-block
+							.flexed-input-text.requred
+								.g-recaptcha(data-sitekey="your_site_key")
+							.checkbox-block
+								input#rules3(type='checkbox' checked  required='')
+								label(for='rules3') Я даю свое согласие на обработку персональных данных.
+							.buttons
+								.btn(onclick="$(this).siblings('input[type=submit]').click();") Отправить
+								input(type='submit' style='display:none;')
+								.file-select
+									input(type='file' name='attachment')
+						.aswerMsg(style='display:none')
+							.buttons
+								.btn.blue(onclick='$(this).parent().parent().hide().empty();') Прекрасно
+	#order-popup-leaseObject.popup-run.oldsite-popup
+		.popup-container
+			.form-container
+				.container
+					.form
+						form(action='sendEmailQ.php' method='post' enctype='multipart/form-data')
+							.name Мы найдем для вас сетевого арендатора
+							input(name='nameForm' type='hidden' value='Мы найдем для вас сетевого арендатора')
+							.flexed-input-text.requred
+								.text
+									| Ваш город
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 10px;') С-Пб
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='SelectCity' value='1' data-region-name="Ленинградская область" data-city-name="Санкт-Петербург")
+												input(type='radio' name='SelectCity' value='' checked='')
+												input#yes2(type='radio' name='SelectCity' value='3' data-region-name="Московская область" data-city-name="Москва")
+												input(type='text' required='' style='width:0px; height:0px' value='')
+												.switch
+										label Москва
+							.flexed-input-text.requred
+								.text
+									| Ваше Имя
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='FIO' type='text' placeholder='')
+							.flexed-input-text.requred
+								.text
+									| Адрес
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='Adres' type='text' placeholder='')
+							.flexed-input-text.requred
+								.text
+									| Площадь кв.м.
+								.choice
+									.flexed-input
+										.input-block
+											input#Area.inputBoxrr(required='' name='Area' type='text' placeholder='' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+									| Аренда в месяц, руб.
+								.choice.radio
+									.flexed-input
+										.input-block
+											input#debetInMounth.inputBoxrr(required='' name='debetInMounth' type='text' placeholder='' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+								.choice.radio
+									.flexed-input
+										.input-block
+											input#debetKvM(required='' name='debetKvM' type='text' placeholder='' readonly='' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											.text
+												| руб./кв.м.
+							.flexed-input-text
+								.text
+									| Электрическая мощность
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='electricPower' type='text' placeholder='' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+									| Номер телефона
+								.choice
+									.flexed-input.full
+										.input-block
+											input.js-tel-input(required='' name='phone' type='text'  placeholder='+7 (___) ___-__-__')
+							.flexed-input-text
+								.text
+									| Электронная почта
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='email' type='email' placeholder='')
+							.flexed-input-text
+								.text
+									| Доп информация
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='description' type='text' placeholder='')
+							.flexed-input-text.buttons
+								.InsuraceOrder.btn(onclick='ClickInsuranceRisk(this);')
+									| Как это работает
+									.psevdo-table__tip.psevdo-table__tip--lenta(style='display: none;')
+										.psevdo-tip__wrapper
+											.psevdo-tip__txt
+												.psevdo-tip__title.psevdo-tip__title--bright
+													| Как это работает
+												.psevdo-tip__text
+													p
+														| Мы профессионально изучим локацию объекта на предмет конкурентов, плотности
+														| населения, предложим сетевым компаниям, во время получим от них обратную связь,
+														| по соглашению разместим рекламу на самых продвинутых сайтах.
+													br
+										.psevdo-tip__close
+								.choice
+									.flexed-input.full
+										.input-block
+							.flexed-input-text.requred
+								.g-recaptcha(data-sitekey="your_site_key")
+							.checkbox-block
+								input#rules4(type='checkbox' checked  required='')
+								label(for='rules4') Я даю свое согласие на обработку персональных данных.
+							.buttons
+								.btn(onclick="$(this).siblings('input[type=submit]').click();") Отправить
+								input(type='submit' style='display:none;')
+								.file-select
+									input(type='file' name='attachment')
+						.aswerMsg(style='display:none')
+							.buttons
+								.btn.blue(onclick='$(this).parent().parent().hide().empty();') Прекрасно
+	#order-popup-rentObject.popup-run.oldsite-popup
+		.popup-container
+			.form-container
+				.container
+					.form
+						form(action='sendEmailQ.php' method='post')
+							.name Мы найдем для вас Объект по вашим параметрам
+							input(name='nameForm' type='hidden' value='Мы найдем для вас Объект по вашим параметрам')
+							.flexed-input-text.requred
+								.text
+									| Ваш город
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 10px;') С-Пб
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='SelectCity' value='1' data-region-name="Ленинградская область" data-city-name="Санкт-Петербург")
+												input(type='radio' name='SelectCity' value='' checked='')
+												input#yes2(type='radio' name='SelectCity' value='3' data-region-name="Московская область" data-city-name="Москва")
+												input(type='text' required='' style='width:0px; height:0px' value='')
+												.switch
+										label Москва
+							.flexed-input-text.requred
+								.text
+									| Ваше Имя
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='FIO' type='text' placeholder='')
+							.flexed-input-text
+								.text
+									| Ваша Фамилия
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='LastName' type='text' placeholder='')
+							.flexed-input-text.requred
+								.text
+									| Наименование брэнда
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='BrendTenant' type='text' placeholder='')
+							.flexed-input-text
+								.text
+									| Вид деятельности
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='typeActivity' type='text' placeholder='' list='typeAct')
+											datalist#typeAct
+												option
+							.flexed-input-text.requred
+								.text
+									| Рассматриваемый метраж
+								.choice
+									.flexed-input
+										.input-block
+											input(required='' name='SpaceAreaMin' type='text' placeholder='От' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											input(required='' name='SpaceAreaMax' type='text' placeholder='До' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+									| Бюджет в месяц
+								.choice
+									.flexed-input
+										.input-block
+											input(required='' name='DebetInMounthMin' type='text' placeholder='От' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											input(required='' name='DebetInMounthMax' type='text' placeholder='До' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text
+								.text
+									| Бюджет за кв.м
+								.choice
+									.flexed-input
+										.input-block
+											input(name='DebetMeterMin' type='text' placeholder='От' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											input(name='DebetMeterMax' type='text' placeholder='До' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+									| Номер телефона
+								.choice
+									.flexed-input.full
+										.input-block
+											input.js-tel-input(required='' name='phone' type='text'  placeholder='+7 (___) ___-__-__')
+							.flexed-input-text
+								.text
+									| Электронная почта
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='email' type='email' placeholder='')
+							.flexed-input-text
+								.text
+									| Доп информация
+								.choice
+									.flexed-input.full
+										.input-block
+											textarea(rows='8' style='width:100%; resize: none;' name='description')
+							.flexed-input-text.buttons
+								.InsuraceOrder.btn(onclick='ClickInsuranceRisk(this);')
+									| Как это работает
+									.psevdo-table__tip.psevdo-table__tip--lenta(style='display: none;')
+										.psevdo-tip__wrapper
+											.psevdo-tip__txt
+												.psevdo-tip__title.psevdo-tip__title--bright
+													| Как это работает
+												.psevdo-tip__text
+													p
+														| Мы предложим в аренду объекты из нашей базы, либо купим под ваш
+														| бизнес объект с торгов. Проанализируем локацию на конкурентов и
+														| на плотность населения.
+													div(style='color: red;') Мы всегда работаем без комиссии!!!
+													p
+													br
+										.psevdo-tip__close
+								.choice
+									.flexed-input.full
+										.input-block
+							.flexed-input-text.requred
+								.g-recaptcha(data-sitekey="your_site_key")
+							.checkbox-block
+								input#rules5(type='checkbox' checked  required='')
+								label(for='rules5') Я даю свое согласие на обработку персональных данных.
+							.buttons
+								.btn(onclick="$(this).siblings('input[type=submit]').click();") Отправить
+								input(type='submit' style='display:none;')
+								.file-select
+									input(type='file' name='attachment')
+						.aswerMsg(style='display:none')
+							.buttons
+								.btn.blue(onclick='$(this).parent().parent().hide().empty();') Прекрасно
+	#order-popup-program.popup-run.oldsite-popup
+		.popup-container
+			.form-container
+				.container
+					.form
+						form(action='sendEmailQ.php' method='post' enctype='multipart/form-data')
+							.name Разработаем адресную программу для вашего бизнеса
+							input(name='nameForm' type='hidden' value='Разработаем адресную программу для вашего бизнеса')
+							.flexed-input-text.requred
+								.text
+									| Ваш город
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 10px;') С-Пб
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='SelectCity' value='1' data-region-name="Ленинградская область" data-city-name="Санкт-Петербург")
+												input(type='radio' name='SelectCity' value='' checked='')
+												input#yes2(type='radio' name='SelectCity' value='3' data-region-name="Московская область" data-city-name="Москва")
+												input(type='text' required='' style='width:0px; height:0px' value='')
+												.switch
+										label Москва
+							.flexed-input.full
+								.input-block.requred
+									input(name='BrendName' required='' type='text' placeholder='Наименование бренда')
+								.input-block
+									input(name='typeActivity' type='text' placeholder='Вид деятельности ')
+							.flexed-input-text
+								.text
+									| Есть ли развитие на 2021/2022г.
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 30px;') Да
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='DevelopmentFor2020' value='1')
+												input(type='radio' name='DevelopmentFor2020' value='2' checked='')
+												input#yes2(type='radio' name='DevelopmentFor2020' value='3')
+												.switch
+										label Нет
+							.flexed-input-text.requred
+								.text
+									| Рассматриваемый метраж, кв.м.
+								.choice
+									.flexed-input
+										.input-block
+											input(required='' name='SpaceAreaMin' type='text' placeholder='От' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											input(required='' name='SpaceAreaMax' type='text' placeholder='До' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+									| Планируемый бюджет за Объект в месяц, (тыс., руб.)
+								.choice
+									.flexed-input
+										.input-block
+											input(required='' name='DebetInMounthMin' type='text' placeholder='От' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											input(required='' name='DebetInMounthMax' type='text' placeholder='До' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text
+								.text
+									| Планируемый бюджет за кв.м., (руб. кв.м./в мес.)
+								.choice
+									.flexed-input
+										.input-block
+											input(name='PayForTheAreaSpaceMin' type='text' placeholder='От' onkeyup='divideNumberByPieces(this)')
+										.input-block
+											input(name='PayForTheAreaSpaceMax' type='text' placeholder='До' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text
+								.text
+									| План открытия новых точек, (количество точек на 2021/2022г.)
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='PlanForOpeningNewPointsCount' type='text' placeholder='')
+							.flexed-input-text
+								.text
+									| Есть Адресная программа развития
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 30px;') Да
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='HaveTargetedDevelopmentProgram' value='1')
+												input(type='radio' name='HaveTargetedDevelopmentProgram' value='2' checked='')
+												input#yes2(type='radio' name='HaveTargetedDevelopmentProgram' value='3')
+												.switch
+										label Нет
+							.flexed-input-text
+								.text
+									| Развиваетесь в области
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 30px;') Да
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='PlanningDevelopmentInAreas' value='1')
+												input(type='radio' name='PlanningDevelopmentInAreas' value='2' checked='')
+												input#yes2(type='radio' name='PlanningDevelopmentInAreas' value='3')
+												.switch
+										label Нет
+							.flexed-input-text
+								.text
+									| Развиваетесь в регионах
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 30px;') Да
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='PlanningDevelopmentInRegion' value='1')
+												input(type='radio' name='PlanningDevelopmentInRegion' value='2' checked='')
+												input#yes2(type='radio' name='PlanningDevelopmentInRegion' value='3')
+												.switch
+										label Нет
+							.flexed-input-text.requred
+								.text
+									| Рассматриваете покупку Объекта
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 30px;') Да
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='WantsByObject' value='1')
+												input(type='radio' name='WantsByObject' value='2' checked='')
+												input#yes2(type='radio' name='WantsByObject' value='3')
+												.switch
+										label Нет
+							.flexed-input-text
+								.text
+									| Количество Менеджеров развития по районам
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='CountManagersByArea' type='text' placeholder='')
+							br
+							.flexed-input-text.requred
+								.text
+									| Ваше Имя
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='FIO' type='text' placeholder='')
+							.flexed-input-text
+								.text
+									| Ваша Фамилия
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='LastName' type='text' placeholder='')
+							.flexed-input-text.requred
+								.text
+									| Номер телефона
+								.choice
+									.flexed-input.full
+										.input-block
+											input.js-tel-input(required='' name='phone' type='text' placeholder='+7 (___) ___-__-__')
+							.flexed-input-text
+								.text
+									| Телефон офиса
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='phoneOffice' type='text' placeholder='')
+							.flexed-input-text
+								.text
+									| Доп информация
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='description' type='text' placeholder='')
+							.flexed-input-text.buttons
+								.InsuraceOrder.btn(onclick='ClickInsuranceRisk(this);')
+									| Как это работает
+									.psevdo-table__tip.psevdo-table__tip--lenta(style='display: none;')
+										.psevdo-tip__wrapper
+											.psevdo-tip__txt
+												.psevdo-tip__title.psevdo-tip__title--bright
+													| Как это работает
+												.psevdo-tip__text
+													p
+														| Наш внутренний сайт подберет районы с большой плотностью
+														| населения и с минимальной конкурентной средой, мы индивидуально работаем с
+														| активными сетевыми компаниями
+													br
+										.psevdo-tip__close
+								.choice
+									.flexed-input.full
+										.input-block
+							.flexed-input-text.requred
+								.g-recaptcha(data-sitekey="your_site_key")
+							.checkbox-block
+								input#rules6(type='checkbox' checked  required='')
+								label(for='rules6') Я даю свое согласие на обработку персональных данных.
+							.buttons
+								.btn(onclick="$(this).siblings('input[type=submit]').click();") Отправить
+								input(type='submit' style='display:none;')
+								.file-select
+									input(type='file' name='attachment')
+						.aswerMsg(style='display:none')
+							.buttons
+								.btn.blue(onclick='$(this).parent().parent().hide().empty();') Прекрасно
