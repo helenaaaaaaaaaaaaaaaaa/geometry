@@ -1178,6 +1178,136 @@
           </div>
         </div>
       </div>
+      <div class="popup-run oldsite-popup" id="order-popup-collective">
+        <div class="popup-container">
+          <div class="form-container">
+            <div class="container">
+              <div class="form">
+                <form action="sendEmailQ.php" method="post">
+                  <div class="name">Подберем объект для коллективного инвестирования</div>
+                  <input name="nameForm" type="hidden" value="Подберем объект для коллективного инвестирования">
+                  <div class="flexed-input-text buttons">
+                    <div class="InsuraceOrder btn" onclick="ClickInsuranceRisk(this);">Как это работает
+                      <div class="psevdo-table__tip psevdo-table__tip--lenta" style="display: none;">
+                        <div class="psevdo-tip__wrapper">
+                          <div class="psevdo-tip__txt">
+                            <div class="psevdo-tip__title psevdo-tip__title--bright">Как это работает</div>
+                            <div class="psevdo-tip__text">
+                              <p>
+                                Наша компания подберет ликвидный объект для коллективных инвестиций,
+                                оценим рыночную арендную ставку, проверим чистоту сделки, если необходимо
+                                разделим объект с полным циклом согласований, сдадим объект сетевым
+                                арендаторам, прибыль от арендных платежей по долям от вложенных инвестиций.
+                                Бюджет вложений от 2 млн. руб.
+                              </p><br>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="psevdo-tip__close"></div>
+                      </div>
+                    </div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваш город</div>
+                    <div class="choice radio">
+                      <div class="flexed-input">
+                        <label style="margin-left: 10px;">С-Пб</label>
+                        <div class="input-block">
+                          <div class="container-radio">
+                            <input id="yes1" type="radio" name="SelectCity" value="1" data-region-name="Ленинградская область" data-city-name="Санкт-Петербург">
+                            <input type="radio" name="SelectCity" value="" checked="">
+                            <input id="yes2" type="radio" name="SelectCity" value="3" data-region-name="Московская область" data-city-name="Москва">
+                            <input type="text" required="" style="width:0px; height:0px" value="">
+                            <div class="switch"></div>
+                          </div>
+                        </div>
+                        <label>Москва</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Ваше Имя</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="FIO" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Бюджет</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input required="" name="debet" type="text" placeholder="" onkeyup="divideNumberByPieces(this)">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="text">Номер телефона</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input class="js-tel-input" required="" name="phone" type="text" placeholder="+7 (___) ___-__-__">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Электронная почта</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="email" type="email" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text">
+                    <div class="text">Доп информация</div>
+                    <div class="choice">
+                      <div class="flexed-input full">
+                        <div class="input-block">
+                          <input name="description" type="text" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flexed-input-text requred">
+                    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+                  </div>
+                  <div class="checkbox-block">
+                    <input id="rules4" type="checkbox" required="" checked>
+                    <label for="rules4">Я даю свое согласие на обработку персональных данных.</label>
+                  </div>
+                  <div class="flexed-input-text buttons">
+                    <input type="submit" style="display:none;">
+                    <div class="file-select" style="height: 49px;">
+                      <input id="attachment" type="file" name="attachment">
+                    </div>
+                  </div>
+                  <div class="buttons"><a class="btn" href="https://wa.me/?text=https://geometry-invest.ru/order_collective.html" target="_blank">Поделиться в WhatsApp</a>
+                    <div class="btn" onclick="$(this).siblings('input[type=submit]').click();">Отправить</div>
+                    <input type="submit" style="display:none;">
+                  </div>
+                </form>
+                <div class="aswerMsg" style="display:none">
+                  <div class="buttons">
+                    <div class="btn blue" onclick="$(this).parent().parent().hide().empty();">Прекрасно</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=ru-RU"></script>
     <script src="js/main.js"></script>

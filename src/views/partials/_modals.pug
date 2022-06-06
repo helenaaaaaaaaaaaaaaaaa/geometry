@@ -1,4 +1,5 @@
 .modals-wrap
+
 	#order-popup-buy.popup-run.oldsite-popup
 		.popup-container
 			.form-container
@@ -676,6 +677,108 @@
 								input(type='submit' style='display:none;')
 								.file-select
 									input(type='file' name='attachment')
+						.aswerMsg(style='display:none')
+							.buttons
+								.btn.blue(onclick='$(this).parent().parent().hide().empty();') Прекрасно
+
+
+
+
+	#order-popup-collective.popup-run.oldsite-popup
+		.popup-container
+			.form-container
+				.container
+					.form
+						form(action='sendEmailQ.php' method='post')
+							.name Подберем объект для коллективного инвестирования
+							input(name='nameForm' type='hidden' value='Подберем объект для коллективного инвестирования')
+
+							.flexed-input-text.buttons
+								.InsuraceOrder.btn(onclick='ClickInsuranceRisk(this);')
+									| Как это работает
+									.psevdo-table__tip.psevdo-table__tip--lenta(style='display: none;')
+										.psevdo-tip__wrapper
+											.psevdo-tip__txt
+												.psevdo-tip__title.psevdo-tip__title--bright
+													| Как это работает
+												.psevdo-tip__text
+													p
+														| Наша компания подберет ликвидный объект для коллективных инвестиций,
+														| оценим рыночную арендную ставку, проверим чистоту сделки, если необходимо
+														| разделим объект с полным циклом согласований, сдадим объект сетевым
+														| арендаторам, прибыль от арендных платежей по долям от вложенных инвестиций.
+														| Бюджет вложений от 2 млн. руб.
+													br
+										.psevdo-tip__close
+								.choice
+									.flexed-input.full
+										.input-block
+
+
+							.flexed-input-text.requred
+								.text
+									| Ваш город
+								.choice.radio
+									.flexed-input
+										label(style='margin-left: 10px;') С-Пб
+										.input-block
+											.container-radio
+												input#yes1(type='radio' name='SelectCity' value='1' data-region-name="Ленинградская область" data-city-name="Санкт-Петербург")
+												input(type='radio' name='SelectCity' value='' checked='')
+												input#yes2(type='radio' name='SelectCity' value='3' data-region-name="Московская область" data-city-name="Москва")
+												input(type='text' required='' style='width:0px; height:0px' value='')
+												.switch
+										label Москва
+							.flexed-input-text.requred
+								.text
+									| Ваше Имя
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='FIO' type='text' placeholder='')
+							.flexed-input-text.requred
+								.text
+									| Бюджет
+								.choice
+									.flexed-input.full
+										.input-block
+											input(required='' name='debet' type='text' placeholder='' onkeyup='divideNumberByPieces(this)')
+							.flexed-input-text.requred
+								.text
+									| Номер телефона
+								.choice
+									.flexed-input.full
+										.input-block
+											input.js-tel-input(required='' name='phone' type='text'  placeholder='+7 (___) ___-__-__')
+							.flexed-input-text
+								.text
+									| Электронная почта
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='email' type='email' placeholder='')
+							.flexed-input-text
+								.text
+									| Доп информация
+								.choice
+									.flexed-input.full
+										.input-block
+											input(name='description' type='text' placeholder='')
+
+							.flexed-input-text.requred
+								.g-recaptcha(data-sitekey="your_site_key")
+
+							.checkbox-block
+								input#rules4(type='checkbox' required='' checked)
+								label(for='rules4') Я даю свое согласие на обработку персональных данных.
+							.flexed-input-text.buttons
+								input(type='submit' style='display:none;')
+								.file-select(style='height: 49px;')
+									input#attachment(type='file' name='attachment')
+							.buttons
+								a.btn(href='https://wa.me/?text=https://geometry-invest.ru/order_collective.html' target='_blank' ) Поделиться в WhatsApp
+								.btn(onclick="$(this).siblings('input[type=submit]').click();") Отправить
+								input(type='submit' style='display:none;')
 						.aswerMsg(style='display:none')
 							.buttons
 								.btn.blue(onclick='$(this).parent().parent().hide().empty();') Прекрасно
