@@ -239,9 +239,6 @@ html {
 
 
 .form-field {
-	border-radius: 8px;
-	background: #FFFFFF;
-	padding: 17px;
 	display: block;
 
 	&__input {
@@ -251,14 +248,25 @@ html {
 		line-height: 145%;
 		color: #292929;
 		overflow: hidden;
+		background: #FFFFFF;
+		padding: 17px;
+		border-radius: 8px;
 
 
 		&::placeholder {
 			color: #545454;
 		}
+		&--grey{
+			background: #F5F5F5;
+		}
+	}
+	&--with-mt{
+		margin-top: 12px;
 	}
 }
-
+.calc-inputs {
+	margin-top: 28px;
+}
 
 .section-title {
 	font-size: 45px;
